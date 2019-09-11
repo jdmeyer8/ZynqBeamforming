@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="gsram5_synth_1" LaunchDir="/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/gsram5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gsram4_synth_1" LaunchDir="/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/gsram4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gsram3_synth_1" LaunchDir="/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/gsram3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gsram2_synth_1" LaunchDir="/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/gsram2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gsram1_synth_1" LaunchDir="/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/gsram1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/prj_ip/prj_ip.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1_corr_probe">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1_corr_probe[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch1_corr_probe[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1i_200">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1i_200[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ch1i_200[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1q_200">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1q_200[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ch1q_200[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2_corr_probe">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2_corr_probe[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch2_corr_probe[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2i_200">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2i_200[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ch2i_200[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2q_200">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2q_200[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ch2q_200[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/current_state">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/current_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/fifo_rxi">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/fifo_rxi[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_rxi[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/fifo_rxq">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/fifo_rxq[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_rxq[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_0_enb200">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_enb200</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_enb200</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

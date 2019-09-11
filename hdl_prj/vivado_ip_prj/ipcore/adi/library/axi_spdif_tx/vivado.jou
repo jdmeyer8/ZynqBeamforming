@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Oct 17 14:26:58 2018
+# Process ID: 11434
+# Current directory: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/axi_spdif_tx
+# Command line: vivado -mode batch -source axi_spdif_tx_ip.tcl
+# Log file: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/axi_spdif_tx/vivado.log
+# Journal file: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/axi_spdif_tx/vivado.jou
+#-----------------------------------------------------------
+source axi_spdif_tx_ip.tcl

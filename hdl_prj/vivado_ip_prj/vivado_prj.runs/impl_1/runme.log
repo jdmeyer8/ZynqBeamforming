@@ -1,0 +1,824 @@
+
+*** Running vivado
+    with args -log system_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_top.tcl -notrace
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_top.tcl -notrace
+Command: open_checkpoint /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_top.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1158.938 ; gain = 0.000 ; free physical = 143 ; free virtual = 6103
+INFO: [Netlist 29-17] Analyzing 3225 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dcp1/system_top_board.xdc]
+Finished Parsing XDC File [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dcp1/system_top_board.xdc]
+Parsing XDC File [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dcp1/system_top_early.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+Finished Parsing XDC File [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dcp1/system_top_early.xdc]
+Parsing XDC File [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dcp1/system_top.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ipcore/mw/projects/ad9361/common/mw_gpio_timing.xdc:2]
+INFO: [Timing 38-2] Deriving generated clocks [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ipcore/mw/projects/ad9361/common/mw_gpio_timing.xdc:2]
+get_clocks: Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 2368.188 ; gain = 647.578 ; free physical = 154 ; free virtual = 5246
+Finished Parsing XDC File [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dcp1/system_top.xdc]
+Parsing XDC File [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dcp1/system_top_late.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk_div_sel_0_s' already exists, overwriting the previous clock with the same name. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ipcore/mw/projects/ad9361/common/mw_clk_constr.tcl:3]
+WARNING: [Constraints 18-619] A clock with name 'clk_div_sel_1_s' already exists, overwriting the previous clock with the same name. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ipcore/mw/projects/ad9361/common/mw_clk_constr.tcl:3]
+Finished Parsing XDC File [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dcp1/system_top_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.44 . Memory (MB): peak = 2368.188 ; gain = 0.000 ; free physical = 120 ; free virtual = 5248
+Restored from archive | CPU: 0.100000 secs | Memory: 0.013687 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.52 . Memory (MB): peak = 2368.188 ; gain = 0.000 ; free physical = 120 ; free virtual = 5248
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 71 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 33 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 38 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.4 (64-bit) build 2086221
+open_checkpoint: Time (s): cpu = 00:00:40 ; elapsed = 00:01:12 . Memory (MB): peak = 2368.188 ; gain = 1209.250 ; free physical = 133 ; free virtual = 5268
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-1540] The version limit for your license is '2018.02' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port gpio_bd[10] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port gpio_bd[8] expects both input and output buffering but the buffers are incomplete.
+INFO: [Project 1-461] DRC finished with 0 Errors, 2 Warnings
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2440.223 ; gain = 64.031 ; free physical = 130 ; free virtual = 5261
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-318] Generating core instance : dbg_hub
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ipcore'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ipcore/adi/library'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "41c8ea77b893b3ca".
+INFO: [Netlist 29-17] Analyzing 3167 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Chipscope 16-318] Generating core instance : u_ila_0
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
+INFO: [Netlist 29-17] Analyzing 3880 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2465.297 ; gain = 0.000 ; free physical = 1302 ; free virtual = 5163
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 14671b237
+
+Time (s): cpu = 00:04:44 ; elapsed = 00:09:21 . Memory (MB): peak = 2465.297 ; gain = 25.074 ; free physical = 1302 ; free virtual = 5163
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 1d4fd883f
+
+Time (s): cpu = 00:05:03 ; elapsed = 00:09:29 . Memory (MB): peak = 2554.969 ; gain = 114.746 ; free physical = 1269 ; free virtual = 5136
+INFO: [Opt 31-389] Phase Retarget created 341 cells and removed 520 cells
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 7 inverter(s) to 18 load pin(s).
+Phase 3 Constant propagation | Checksum: 1ea77398b
+
+Time (s): cpu = 00:05:05 ; elapsed = 00:09:31 . Memory (MB): peak = 2554.969 ; gain = 114.746 ; free physical = 1267 ; free virtual = 5134
+INFO: [Opt 31-389] Phase Constant propagation created 223 cells and removed 1408 cells
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 19e6ec505
+
+Time (s): cpu = 00:05:08 ; elapsed = 00:09:34 . Memory (MB): peak = 2554.969 ; gain = 114.746 ; free physical = 1256 ; free virtual = 5129
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 904 cells
+
+Phase 5 BUFG optimization
+Phase 5 BUFG optimization | Checksum: 19e6ec505
+
+Time (s): cpu = 00:05:10 ; elapsed = 00:09:36 . Memory (MB): peak = 2554.969 ; gain = 114.746 ; free physical = 1255 ; free virtual = 5130
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 6 Shift Register Optimization
+Phase 6 Shift Register Optimization | Checksum: 193aa94d2
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:09:38 . Memory (MB): peak = 2554.969 ; gain = 114.746 ; free physical = 1254 ; free virtual = 5130
+INFO: [Opt 31-389] Phase Shift Register Optimization created 1 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2554.969 ; gain = 0.000 ; free physical = 1252 ; free virtual = 5128
+Ending Logic Optimization Task | Checksum: 16b3741db
+
+Time (s): cpu = 00:05:15 ; elapsed = 00:09:41 . Memory (MB): peak = 2554.969 ; gain = 114.746 ; free physical = 1252 ; free virtual = 5128
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.298 | TNS=0.000 |
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 220 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 156 newly gated: 86 Total Ports: 440
+Number of Flops added for Enable Generation: 8
+
+Ending PowerOpt Patch Enables Task | Checksum: 133a3360c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1078 ; free virtual = 4967
+Ending Power Optimization Task | Checksum: 133a3360c
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:28 . Memory (MB): peak = 3824.418 ; gain = 1269.449 ; free physical = 1173 ; free virtual = 5062
+
+Starting Logic Optimization Task
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+
+Phase 1 Remap
+Phase 1 Remap | Checksum: 19bc88fdb
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1165 ; free virtual = 5055
+INFO: [Opt 31-389] Phase Remap created 10 cells and removed 30 cells
+Ending Logic Optimization Task | Checksum: 19bc88fdb
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1165 ; free virtual = 5055
+INFO: [Common 17-83] Releasing license: Implementation
+56 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:06:59 ; elapsed = 00:10:21 . Memory (MB): peak = 3824.418 ; gain = 1456.230 ; free physical = 1165 ; free virtual = 5055
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1158 ; free virtual = 5052
+INFO: [Common 17-1381] The checkpoint '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_top_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1115 ; free virtual = 5054
+INFO: [runtcl-4] Executing : report_drc -file system_top_drc_opted.rpt -pb system_top_drc_opted.pb -rpx system_top_drc_opted.rpx
+Command: report_drc -file system_top_drc_opted.rpt -pb system_top_drc_opted.pb -rpx system_top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_top_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1096 ; free virtual = 5050
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-1540] The version limit for your license is '2018.02' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port gpio_bd[10] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port gpio_bd[8] expects both input and output buffering but the buffers are incomplete.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 23 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1089 ; free virtual = 5049
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e347e021
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.25 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1089 ; free virtual = 5049
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 1091 ; free virtual = 5051
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 12b63c02f
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 970 ; free virtual = 4936
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1c2e74b40
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:31 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 809 ; free virtual = 4780
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1c2e74b40
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:31 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 809 ; free virtual = 4780
+Phase 1 Placer Initialization | Checksum: 1c2e74b40
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:32 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 809 ; free virtual = 4780
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 1551441de
+
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:12 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 703 ; free virtual = 4696
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1551441de
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:13 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 702 ; free virtual = 4696
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: d501e83f
+
+Time (s): cpu = 00:03:16 ; elapsed = 00:01:21 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 687 ; free virtual = 4681
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 14b82007b
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:01:22 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 686 ; free virtual = 4681
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: a01d2220
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:01:22 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 686 ; free virtual = 4681
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 110949bad
+
+Time (s): cpu = 00:03:36 ; elapsed = 00:01:39 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 609 ; free virtual = 4605
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 166454643
+
+Time (s): cpu = 00:03:38 ; elapsed = 00:01:41 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 613 ; free virtual = 4608
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 10ac3f3ae
+
+Time (s): cpu = 00:03:39 ; elapsed = 00:01:42 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 613 ; free virtual = 4608
+Phase 3 Detail Placement | Checksum: 10ac3f3ae
+
+Time (s): cpu = 00:03:39 ; elapsed = 00:01:42 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 613 ; free virtual = 4609
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 203b896be
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Place 46-33] Processed net i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/u_rx_gs_mult/gen_rx_gs_mult_cores[0].rx_gs_mult_core_i/scnt_d2_reg[1]_rep__32_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/enb200, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_up_dac_channel/up_rack_int_reg_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_core_rst_reg/rst, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-31] BUFG insertion identified 4 candidate nets, 0 success, 4 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 203b896be
+
+Time (s): cpu = 00:04:22 ; elapsed = 00:01:54 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 666 ; free virtual = 4662
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.512. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 226c90d7e
+
+Time (s): cpu = 00:04:28 ; elapsed = 00:02:01 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 666 ; free virtual = 4663
+Phase 4.1 Post Commit Optimization | Checksum: 226c90d7e
+
+Time (s): cpu = 00:04:29 ; elapsed = 00:02:02 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 666 ; free virtual = 4663
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 226c90d7e
+
+Time (s): cpu = 00:04:30 ; elapsed = 00:02:02 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 675 ; free virtual = 4672
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 226c90d7e
+
+Time (s): cpu = 00:04:31 ; elapsed = 00:02:03 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 679 ; free virtual = 4676
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 2195c1b40
+
+Time (s): cpu = 00:04:31 ; elapsed = 00:02:03 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 679 ; free virtual = 4676
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2195c1b40
+
+Time (s): cpu = 00:04:32 ; elapsed = 00:02:04 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 679 ; free virtual = 4676
+Ending Placer Task | Checksum: 1ac227de6
+
+Time (s): cpu = 00:04:32 ; elapsed = 00:02:04 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 794 ; free virtual = 4791
+INFO: [Common 17-83] Releasing license: Implementation
+88 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:04:39 ; elapsed = 00:02:10 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 794 ; free virtual = 4791
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 650 ; free virtual = 4764
+INFO: [Common 17-1381] The checkpoint '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_top_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 763 ; free virtual = 4787
+INFO: [runtcl-4] Executing : report_io -file system_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.26 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 743 ; free virtual = 4768
+INFO: [runtcl-4] Executing : report_utilization -file system_top_utilization_placed.rpt -pb system_top_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.82 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 762 ; free virtual = 4788
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file system_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.28 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 762 ; free virtual = 4788
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-1540] The version limit for your license is '2018.02' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+98 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:09 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 711 ; free virtual = 4753
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 554 ; free virtual = 4713
+INFO: [Common 17-1381] The checkpoint '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_top_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 672 ; free virtual = 4743
+Command: route_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-1540] The version limit for your license is '2018.02' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: f7202ad9 ConstDB: 0 ShapeSum: b502530d RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 1245dd987
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:49 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 347 ; free virtual = 4423
+Post Restoration Checksum: NetGraph: b168100f NumContArr: 72f5c978 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1245dd987
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:51 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 357 ; free virtual = 4435
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1245dd987
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:52 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 309 ; free virtual = 4389
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1245dd987
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 309 ; free virtual = 4389
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1a59e2993
+
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:08 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 267 ; free virtual = 4348
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.427  | TNS=0.000  | WHS=-0.403 | THS=-2489.182|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 1b1550962
+
+Time (s): cpu = 00:02:38 ; elapsed = 00:01:16 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 238 ; free virtual = 4320
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.427  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 234267792
+
+Time (s): cpu = 00:02:38 ; elapsed = 00:01:17 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 235 ; free virtual = 4318
+Phase 2 Router Initialization | Checksum: 21e856e50
+
+Time (s): cpu = 00:02:38 ; elapsed = 00:01:17 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 235 ; free virtual = 4318
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 21fe8d4cc
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:01:25 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 219 ; free virtual = 4301
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 6659
+ Number of Nodes with overlaps = 399
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.331  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 10f9ff463
+
+Time (s): cpu = 00:04:57 ; elapsed = 00:01:45 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 221 ; free virtual = 4304
+Phase 4 Rip-up And Reroute | Checksum: 10f9ff463
+
+Time (s): cpu = 00:04:57 ; elapsed = 00:01:45 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 221 ; free virtual = 4304
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 10f9ff463
+
+Time (s): cpu = 00:04:57 ; elapsed = 00:01:45 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 221 ; free virtual = 4304
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 10f9ff463
+
+Time (s): cpu = 00:04:58 ; elapsed = 00:01:46 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 221 ; free virtual = 4304
+Phase 5 Delay and Skew Optimization | Checksum: 10f9ff463
+
+Time (s): cpu = 00:04:58 ; elapsed = 00:01:46 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 221 ; free virtual = 4304
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1aa6acf28
+
+Time (s): cpu = 00:05:09 ; elapsed = 00:01:49 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 216 ; free virtual = 4305
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.331  | TNS=0.000  | WHS=-0.361 | THS=-55.094|
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 163f667d3
+
+Time (s): cpu = 00:05:12 ; elapsed = 00:01:52 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 232 ; free virtual = 4296
+Phase 6.1 Hold Fix Iter | Checksum: 163f667d3
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:01:52 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 232 ; free virtual = 4296
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.331  | TNS=0.000  | WHS=-0.361 | THS=-55.094|
+
+Phase 6.2 Additional Hold Fix | Checksum: 1a1f29f52
+
+Time (s): cpu = 00:05:27 ; elapsed = 00:01:58 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 237 ; free virtual = 4301
+Phase 6 Post Hold Fix | Checksum: 1ac7ee61f
+
+Time (s): cpu = 00:05:34 ; elapsed = 00:02:03 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 231 ; free virtual = 4295
+
+Phase 7 Timing Verification
+
+Phase 7.1 Update Timing
+Phase 7.1 Update Timing | Checksum: 19f34defd
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:02:06 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 231 ; free virtual = 4295
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.331  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 7 Timing Verification | Checksum: 19f34defd
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:02:07 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 230 ; free virtual = 4294
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 10.1058 %
+  Global Horizontal Routing Utilization  = 12.2141 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 19f34defd
+
+Time (s): cpu = 00:05:54 ; elapsed = 00:02:07 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 229 ; free virtual = 4293
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 19f34defd
+
+Time (s): cpu = 00:05:54 ; elapsed = 00:02:07 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 228 ; free virtual = 4292
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 196ed5ec5
+
+Time (s): cpu = 00:05:58 ; elapsed = 00:02:11 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 217 ; free virtual = 4281
+
+Phase 11 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.332  | TNS=0.000  | WHS=-0.361 | THS=-54.903|
+
+CRITICAL WARNING: [Route 35-39] The design did not meet timing requirements. Please run report_timing_summary for detailed reports.
+Resolution: Verify that the timing was met or had small violations at all previous steps (synthesis, placement, power_opt, and phys_opt). Run report_timing_summary and analyze individual timing paths.
+INFO: [Route 35-253] TNS is the sum of the worst slack violation on every endpoint in the design. Review the paths with the biggest WNS violations in the timing reports and modify your constraints or your design to improve both WNS and TNS.
+Phase 11 Post Router Timing | Checksum: 1cbd4daea
+
+Time (s): cpu = 00:06:46 ; elapsed = 00:02:20 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 159 ; free virtual = 4224
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[24]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[28]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[0]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[10]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[12]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[16]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[20]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[4]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe_reg[10]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe_reg[12]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe_reg[16]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe_reg[20]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe_reg[24]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe_reg[28]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe_reg[4]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch4_corr_probe_reg[10]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch4_corr_probe_reg[12]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch4_corr_probe_reg[16]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch4_corr_probe_reg[20]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch4_corr_probe_reg[24]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch4_corr_probe_reg[28]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch5_corr_probe_reg[12]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch5_corr_probe_reg[16]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch5_corr_probe_reg[20]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch5_corr_probe_reg[24]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch5_corr_probe_reg[28]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe_reg[0]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch4_corr_probe_reg[0]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch4_corr_probe_reg[4]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch5_corr_probe_reg[0]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch5_corr_probe_reg[10]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch5_corr_probe_reg[4]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch3_corr_probe_reg[0]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch3_corr_probe_reg[10]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch3_corr_probe_reg[12]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch3_corr_probe_reg[16]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch3_corr_probe_reg[4]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch3_corr_probe_reg[20]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch3_corr_probe_reg[24]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch3_corr_probe_reg[28]/R driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-459] Router was unable to fix hold violation on 3 pins. This could be due to a combination of congestion, blockages and run-time limitations. Such pins are:
+	i_system_wrapper/system_i/sys_ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I
+	i_system_wrapper/system_i/axi_cpu_interconnect/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.splitter_aw_si/m_ready_d[0]_i_1/I2
+	i_system_wrapper/system_i/axi_cpu_interconnect/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.splitter_aw_si/m_ready_d[1]_i_1/I2
+
+Resolution: You may try high effort hold fixing by turning on param route.enableGlobalHoldIter.
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:06:46 ; elapsed = 00:02:21 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 402 ; free virtual = 4467
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+116 Infos, 85 Warnings, 1 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:06:55 ; elapsed = 00:02:26 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 403 ; free virtual = 4467
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 216 ; free virtual = 4439
+INFO: [Common 17-1381] The checkpoint '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_top_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 360 ; free virtual = 4459
+INFO: [runtcl-4] Executing : report_drc -file system_top_drc_routed.rpt -pb system_top_drc_routed.pb -rpx system_top_drc_routed.rpx
+Command: report_drc -file system_top_drc_routed.rpt -pb system_top_drc_routed.pb -rpx system_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_top_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:23 ; elapsed = 00:00:06 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 333 ; free virtual = 4432
+INFO: [runtcl-4] Executing : report_methodology -file system_top_methodology_drc_routed.rpt -pb system_top_methodology_drc_routed.pb -rpx system_top_methodology_drc_routed.rpx
+Command: report_methodology -file system_top_methodology_drc_routed.rpt -pb system_top_methodology_drc_routed.pb -rpx system_top_methodology_drc_routed.rpx
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:02:55 ; elapsed = 00:00:32 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 132 ; free virtual = 4014
+INFO: [runtcl-4] Executing : report_power -file system_top_power_routed.rpt -pb system_top_power_summary_routed.pb -rpx system_top_power_routed.rpx
+Command: report_power -file system_top_power_routed.rpt -pb system_top_power_summary_routed.pb -rpx system_top_power_routed.rpx
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirtClk_system_util_mw_clkconstr_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/ip/system_util_mw_clkconstr_0/system_util_mw_clkconstr_0_constr.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+WARNING: [Timing 38-3] User defined clock exists on pin i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O and will prevent any subsequent automatic derivation of generated clocks on that pin.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+131 Infos, 92 Warnings, 1 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:39 ; elapsed = 00:00:14 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 173 ; free virtual = 3960
+INFO: [runtcl-4] Executing : report_route_status -file system_top_route_status.rpt -pb system_top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file system_top_timing_summary_routed.rpt -rpx system_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file system_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file system_top_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3824.418 ; gain = 0.000 ; free physical = 206 ; free virtual = 3938
+Command: write_bitstream -force system_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-1540] The version limit for your license is '2018.02' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell i_system_wrapper/system_i/axi_ad9361_dac_fifo/inst/i_mem/xlnx_opt_LUT_m_ram_reg_ENARDEN_cooolgate_en_gate_316 is not included in the LUT equation: 'O6=(A6*A2)+(A6*(~A2)*A5*(~A3))+(A6*(~A2)*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 32 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i... and (the first 15 of 30 listed).
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_0/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_0/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_1/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_1/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_2/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_2/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_3/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_3/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 23 Warnings, 56 Advisories
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./system_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-83] Releasing license: Implementation
+205 Infos, 116 Warnings, 2 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:02:03 ; elapsed = 00:00:50 . Memory (MB): peak = 4172.695 ; gain = 348.277 ; free physical = 630 ; free virtual = 3989
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 14:56:40 2019...

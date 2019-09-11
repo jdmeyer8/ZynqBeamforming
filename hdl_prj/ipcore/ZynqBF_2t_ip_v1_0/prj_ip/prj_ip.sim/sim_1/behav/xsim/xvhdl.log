@@ -1,0 +1,65 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_addr_decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_axi_lite_module
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_axi_lite.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_axi_lite
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_goldSequences
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_gs_selector
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_data_in
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlation_config
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_get_bit
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSeq1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_goldSeq1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSeq2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_goldSeq2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_shift_rx
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator_en
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_sum_elements_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_all_u
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peak_fsm
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_running_max
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_store_index
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_select_inputs
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ram_rd_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ram_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_state_machine
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_in_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_Detect_Change
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_nr_reciprocal.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_nr_reciprocal
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_local_fsm
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_update_csi
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ch_est

@@ -1,0 +1,70 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto cb81425f4683451a8bc230b4709e38d0 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ZynqBF_2t_ip_behav xil_defaultlib.ZynqBF_2t_ip -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.zynqbf_2t_ip_src_zynqbf_2tx_fpga...
+Compiling package unisim.vcomponents
+Compiling package unimacro.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_addr_decoder [zynqbf_2t_ip_addr_decoder_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_axi_lite_module [zynqbf_2t_ip_axi_lite_module_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_axi_lite [zynqbf_2t_ip_axi_lite_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSequences [zynqbf_2t_ip_src_goldsequences_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gs_selector [zynqbf_2t_ip_src_gs_selector_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_ram_i [zynqbf_2t_ip_src_rx_ram_i_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_i [zynqbf_2t_ip_src_correlator_i_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_sum_elements_i [zynqbf_2t_ip_src_sum_elements_i_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in [zynqbf_2t_ip_src_data_in_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_shift_rx [zynqbf_2t_ip_src_shift_rx_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en [zynqbf_2t_ip_src_correlator_en_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_all_u [zynqbf_2t_ip_src_all_u_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator1 [zynqbf_2t_ip_src_correlator1_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm [zynqbf_2t_ip_src_peak_fsm_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max [zynqbf_2t_ip_src_running_max_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index [zynqbf_2t_ip_src_store_index_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch1 [zynqbf_2t_ip_src_peakdetect_ch1_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs [zynqbf_2t_ip_src_select_inputs_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_rd_counter [zynqbf_2t_ip_src_ram_rd_counter_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_counter [zynqbf_2t_ip_src_ram_counter_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config_block [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences_block [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en_block [zynqbf_2t_ip_src_correlator_en_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator2 [zynqbf_2t_ip_src_correlator2_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm_block [zynqbf_2t_ip_src_peak_fsm_block_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max_block [zynqbf_2t_ip_src_running_max_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index_block [zynqbf_2t_ip_src_store_index_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch2 [zynqbf_2t_ip_src_peakdetect_ch2_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_state_machine [zynqbf_2t_ip_src_state_machine_d...]
+Compiling architecture ff18_internal_vhdl_v of entity unisim.FF18_INTERNAL_VHDL [\FF18_INTERNAL_VHDL(data_width=1...]
+Compiling architecture fifo18e1_v of entity unisim.FIFO18E1 [\FIFO18E1(data_width=18)(0,15)(0...]
+Compiling architecture fifo18_v of entity unisim.FIFO18 [\FIFO18(almost_full_offset="0000...]
+Compiling architecture fifo_v of entity unimacro.FIFO_DUALCLOCK_MACRO [\FIFO_DUALCLOCK_MACRO(data_width...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_in_fifo [zynqbf_2t_ip_src_in_fifo_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_bram [zynqbf_2t_ip_src_rx_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_Detect_Change [zynqbf_2t_ip_src_detect_change_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_nr_reciprocal [zynqbf_2t_ip_src_nr_reciprocal_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_local_fsm [zynqbf_2t_ip_src_local_fsm_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_update_csi [zynqbf_2t_ip_src_update_csi_defa...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ch_est [zynqbf_2t_ip_src_ch_est_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_channel_estimator [zynqbf_2t_ip_src_channel_estimat...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_dut [zynqbf_2t_ip_dut_default]
+Compiling architecture rtl of entity xil_defaultlib.zynqbf_2t_ip
+Built simulation snapshot ZynqBF_2t_ip_behav

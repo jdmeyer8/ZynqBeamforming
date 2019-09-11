@@ -1,0 +1,816 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Tue Apr 16 14:55:19 2019
+| Host         : jason-OptiPlex-9020 running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_methodology -file system_top_methodology_drc_routed.rpt -pb system_top_methodology_drc_routed.pb -rpx system_top_methodology_drc_routed.rpx
+| Design       : system_top
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_system_top
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 153
++-----------+----------+-------------------------------------------------+------------+
+| Rule      | Severity | Description                                     | Violations |
++-----------+----------+-------------------------------------------------+------------+
+| CKBF-1    | Warning  | connects_I_driver_BUFR                          | 2          |
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain | 20         |
+| TIMING-1  | Warning  | Invalid clock waveform on Clock Modifying Block | 2          |
+| TIMING-3  | Warning  | Invalid primary clock on Clock Modifying Block  | 2          |
+| TIMING-9  | Warning  | Unknown CDC Logic                               | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                | 1          |
+| TIMING-18 | Warning  | Missing input or output delay                   | 50         |
+| TIMING-24 | Warning  | Overridden Max delay datapath only              | 58         |
+| TIMING-35 | Warning  | No common node in paths with the same clock     | 1          |
+| TIMING-38 | Warning  | Bus skew constraint applied on multiple clocks  | 10         |
+| XDCB-5    | Warning  | Runtime inefficient way to find pin objects     | 6          |
++-----------+----------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CKBF-1#1 Warning
+connects_I_driver_BUFR  
+The BUFGCTRL cell i_system_wrapper/system_i/util_ad9361_divclk/inst/i_div_clk_gbuf I0 pin is driven by a BUFR cell i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0. For 7-Series devices, this is not a recommended clock topology. Please analyze your clock network and remove the BUFR to BUFGCTRL cascade.
+Related violations: <none>
+
+CKBF-1#2 Warning
+connects_I_driver_BUFR  
+The BUFGCTRL cell i_system_wrapper/system_i/util_ad9361_divclk/inst/i_div_clk_gbuf I1 pin is driven by a BUFR cell i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1. For 7-Series devices, this is not a recommended clock topology. Please analyze your clock network and remove the BUFR to BUFGCTRL cascade.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDCE cell i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_clock_mon/d_count_run_m3_reg in site SLICE_X40Y242 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_clock_mon/up_count_running_m1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDCE cell i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_clock_mon/d_count_run_m3_reg in site SLICE_X59Y245 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_clock_mon/up_count_running_m1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X90Y225 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X91Y224 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X90Y223 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X92Y225 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X87Y224 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X89Y224 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X88Y224 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[12] in site SLICE_X85Y223 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[11] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[20] in site SLICE_X85Y222 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[19] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[4] in site SLICE_X85Y224 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#13 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[10] in site SLICE_X93Y216 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#14 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X93Y217 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#15 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/shift_reg_in_reg[0] in site SLICE_X88Y228 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#16 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X88Y229 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#17 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X85Y227 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#18 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X87Y227 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#19 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_sync_control_src/cdc_sync_stage2_reg[0] in site SLICE_X31Y258 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_sync_status_src/cdc_sync_stage1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#20 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_sync_control_dest/cdc_sync_stage2_reg[0] in site SLICE_X32Y266 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_sync_status_dest/cdc_sync_stage1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-1#1 Warning
+Invalid clock waveform on Clock Modifying Block  
+Invalid clock waveform for clock clk_div_sel_0_s specified at a BUFR output i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O that does not match the CMB settings. The waveform of the clock is 16.28 {0 8.138}. The expected waveform is 16 {0 8}
+Related violations: <none>
+
+TIMING-1#2 Warning
+Invalid clock waveform on Clock Modifying Block  
+Invalid clock waveform for clock clk_div_sel_1_s specified at a BUFR output i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O that does not match the CMB settings. The waveform of the clock is 16.28 {0 8.138}. The expected waveform is 8 {0 4}
+Related violations: <none>
+
+TIMING-3#1 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock clk_div_sel_0_s is created on the output pin or net i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#2 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock clk_div_sel_1_s is created on the output pin or net i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[0] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[10] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[11] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[12] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[13] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[14] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[1] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[2] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[3] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[4] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[5] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[6] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[7] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[8] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on gpio_bd[9] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on iic_scl relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on iic_sda relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_n[0] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_n[1] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_n[2] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_n[3] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_n[4] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_n[5] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[0] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[1] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[2] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[3] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[4] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[5] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An input delay is missing on rx_frame_in_n relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An input delay is missing on rx_frame_in_p relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An input delay is missing on tdd_sync relative to clock(s) clk_fpga_0, rx_clk
+Related violations: <none>
+
+TIMING-18#33 Warning
+Missing input or output delay  
+An output delay is missing on enable relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#34 Warning
+Missing input or output delay  
+An output delay is missing on tx_clk_out_n relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#35 Warning
+Missing input or output delay  
+An output delay is missing on tx_clk_out_p relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#36 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[0] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#37 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[1] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#38 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[2] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#39 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[3] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#40 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[4] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#41 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[5] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#42 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[0] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#43 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[1] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#44 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[2] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#45 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[3] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#46 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[4] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#47 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[5] relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#48 Warning
+Missing input or output delay  
+An output delay is missing on tx_frame_out_n relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#49 Warning
+Missing input or output delay  
+An output delay is missing on tx_frame_out_p relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-18#50 Warning
+Missing input or output delay  
+An output delay is missing on txnrx relative to clock(s) rx_clk
+Related violations: <none>
+
+TIMING-24#1 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 102). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#2 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 103). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#3 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 110). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#4 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 114). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#5 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 116). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#6 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 118). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#7 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 122). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#8 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 144). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#9 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 150). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#10 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 154). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#11 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 160). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#12 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 162). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#13 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_0_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 99). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#14 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 102). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#15 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 103). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#16 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 110). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#17 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 114). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#18 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 116). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#19 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 118). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#20 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 122). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#21 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 144). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#22 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 150). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#23 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 154). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#24 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 160). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#25 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 162). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#26 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_div_sel_1_s and clk_fpga_0 overrides a set_max_delay -datapath_only (position 99). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#27 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 100). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#28 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 101). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#29 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 104). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#30 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 113). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#31 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 115). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#32 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 117). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#33 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 119). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#34 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 120). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#35 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 121). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#36 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 146). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#37 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 148). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#38 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 152). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#39 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 156). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#40 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 158). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#41 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 95). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#42 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_0_s overrides a set_max_delay -datapath_only (position 98). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#43 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 100). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#44 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 101). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#45 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 104). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#46 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 113). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#47 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 115). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#48 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 117). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#49 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 119). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#50 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 120). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#51 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 121). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#52 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 146). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#53 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 148). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#54 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 152). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#55 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 156). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#56 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 158). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#57 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 95). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#58 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 132 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and clk_div_sel_1_s overrides a set_max_delay -datapath_only (position 98). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-35#1 Warning
+No common node in paths with the same clock  
+The clock clk_fpga_0 has paths without a common node. First path found between i_system_wrapper/system_i/sys_ps7/inst/PS7_i/FCLKCLK[0] and i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch1_corr_probe_reg[14]/R. Please review clock constraints
+Related violations: <none>
+
+TIMING-38#1 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 143 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#2 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 145 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#3 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 147 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#4 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 149 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#5 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 151 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#6 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 153 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#7 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 155 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#8 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 157 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#9 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 159 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#10 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 161 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '176' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/u_ila_0_CV.0/out/ila_impl.xdc (Line: 10)
+Related violations: <none>
+
+XDCB-5#2 Warning
+Runtime inefficient way to find pin objects  
+The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '178' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/u_ila_0_CV.0/out/ila_impl.xdc (Line: 16)
+Related violations: <none>
+
+XDCB-5#3 Warning
+Runtime inefficient way to find pin objects  
+The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '177' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/u_ila_0_CV.0/out/ila_impl.xdc (Line: 15)
+Related violations: <none>
+
+XDCB-5#4 Warning
+Runtime inefficient way to find pin objects  
+The option '-from : [get_pins -hierarchical -filter {NAME =~ *allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '175' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/u_ila_0_CV.0/out/ila_impl.xdc (Line: 5)
+Related violations: <none>
+
+XDCB-5#5 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ *allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '175' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/u_ila_0_CV.0/out/ila_impl.xdc (Line: 5)
+Related violations: <none>
+
+XDCB-5#6 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ "*BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK"}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '173' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/.Xil/Vivado-22432-jason-OptiPlex-9020/dbg_hub_CV.0/out/xsdbm.xdc (Line: 5)
+Related violations: <none>
+
+

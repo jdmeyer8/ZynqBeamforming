@@ -1,0 +1,47 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSeq1.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSeq2.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_wrapper.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_nr_reciprocal.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_sync_csi.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSeq_ram.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSeq.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_gs_mult_core.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_gs_mult.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ch_est_mac.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ch_est2.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlators.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" \
+"../../../../../ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" \
+"../../../../../../simulation/ZynqBF_2tx_tb.vhd" \
+
+# Do not sort compile order
+nosort

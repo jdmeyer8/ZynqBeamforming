@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../vivado_prj.srcs/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../vivado_prj.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" --include "../../../../vivado_prj.srcs/sources_1/bd/system/ipshared/1313/hdl" --include "../../../../vivado_prj.srcs/sources_1/bd/system/ipshared/225a" --include "/opt/Xilinx/Vivado/2017.4/data/xilinx_vip/include" \
+"../../../../vivado_prj.ip_user_files/ip/gsram5/sim/gsram5.v" \
+"../../../../vivado_prj.ip_user_files/ip/gsram4/sim/gsram4.v" \
+"../../../../vivado_prj.ip_user_files/ip/gsram3/sim/gsram3.v" \
+"../../../../vivado_prj.ip_user_files/ip/gsram2/sim/gsram2.v" \
+"../../../../vivado_prj.ip_user_files/ip/gsram1/sim/gsram1.v" \
+"../../../../vivado_prj.ip_user_files/ip/rx_ram_core/sim/rx_ram_core.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

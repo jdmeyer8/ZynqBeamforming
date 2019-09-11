@@ -1,0 +1,29 @@
+$date
+        2019-Feb-25 14:31:26
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 16 " i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/rx_q_in [15:0] $end
+$var reg 16 2 i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/rx_i_in [15:0] $end
+$var reg 1 B u_ila_0_rx_v_in $end
+$var reg 1 C _TRIGGER $end
+$var reg 1 D _WINDOW $end
+$var reg 1 E _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+b0 2
+0B
+0C
+1D
+0E
+$end
+#512
+1C

@@ -1,0 +1,31 @@
+$date
+        2019-Mar-19 14:17:47
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 16 " i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1i_rfclk [15:0] $end
+$var reg 16 2 i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2i_rfclk [15:0] $end
+$var reg 16 B i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1q_rfclk [15:0] $end
+$var reg 16 R i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2q_rfclk [15:0] $end
+$var reg 1 b _TRIGGER $end
+$var reg 1 c _WINDOW $end
+$var reg 1 d _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11101 "
+b111000 2
+b100000 B
+b1111111111111111 R
+0b
+1c
+0d
+$end
+#4096
+1b

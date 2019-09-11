@@ -1,0 +1,47 @@
+ --> ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg
+ZynqBF_2tx_fpga/channel_estimator/goldSequences --> ZynqBF_2t_ip_src_goldSequences
+ZynqBF_2tx_fpga/channel_estimator/gs_selector --> ZynqBF_2t_ip_src_gs_selector
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/correlation_config --> ZynqBF_2t_ip_src_correlation_config
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/correlator_en --> ZynqBF_2t_ip_src_correlator_en
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/data_in --> ZynqBF_2t_ip_src_data_in
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/gold_sequences --> ZynqBF_2t_ip_src_gold_sequences
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/rx_ram_i/get_bit --> ZynqBF_2t_ip_src_get_bit
+ZynqBF_2tx_fpga/channel_estimator/in_fifo/rx_i_fifo/SimpleDualPortRAM_generic --> ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/rx_ram_i --> ZynqBF_2t_ip_src_rx_ram_i
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/all_u --> ZynqBF_2t_ip_src_all_u
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/shift_rx --> ZynqBF_2t_ip_src_shift_rx
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/correlator_i --> ZynqBF_2t_ip_src_correlator_i
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1/sum_elements_i --> ZynqBF_2t_ip_src_sum_elements_i
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/correlator1 --> ZynqBF_2t_ip_src_correlator1
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/peak_fsm --> ZynqBF_2t_ip_src_peak_fsm
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/running_max --> ZynqBF_2t_ip_src_running_max
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1/store_index --> ZynqBF_2t_ip_src_store_index
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch1 --> ZynqBF_2t_ip_src_peakdetect_ch1
+ZynqBF_2tx_fpga/channel_estimator/ram_rd_counter/select_inputs --> ZynqBF_2t_ip_src_select_inputs
+ZynqBF_2tx_fpga/channel_estimator/ram_rd_counter --> ZynqBF_2t_ip_src_ram_rd_counter
+ZynqBF_2tx_fpga/channel_estimator/ram_counter --> ZynqBF_2t_ip_src_ram_counter
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2/correlator2/correlation_config --> ZynqBF_2t_ip_src_correlation_config_block
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2/correlator2/correlator_en --> ZynqBF_2t_ip_src_correlator_en_block
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2/correlator2/data_in --> ZynqBF_2t_ip_src_data_in_block
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2/correlator2/gold_sequences --> ZynqBF_2t_ip_src_gold_sequences_block
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2/correlator2 --> ZynqBF_2t_ip_src_correlator2
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2/peak_fsm --> ZynqBF_2t_ip_src_peak_fsm_block
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2/running_max --> ZynqBF_2t_ip_src_running_max_block
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2/store_index --> ZynqBF_2t_ip_src_store_index_block
+ZynqBF_2tx_fpga/channel_estimator/peakdetect_ch2 --> ZynqBF_2t_ip_src_peakdetect_ch2
+ZynqBF_2tx_fpga/channel_estimator/state_machine --> ZynqBF_2t_ip_src_state_machine
+ZynqBF_2tx_fpga/channel_estimator/in_fifo/rx_i_fifo --> ZynqBF_2t_ip_src_rx_i_fifo
+ZynqBF_2tx_fpga/channel_estimator/in_fifo/rx_q_fifo --> ZynqBF_2t_ip_src_rx_q_fifo
+ZynqBF_2tx_fpga/channel_estimator/in_fifo --> ZynqBF_2t_ip_src_in_fifo
+ZynqBF_2tx_fpga/channel_estimator/rx_bram --> ZynqBF_2t_ip_src_rx_bram
+ZynqBF_2tx_fpga/channel_estimator/ch_est/Detect Change --> ZynqBF_2t_ip_src_Detect_Change
+ZynqBF_2tx_fpga/channel_estimator/ch_est/calc_inverse/HDL Reciprocal/HDL Reciprocal_core --> ZynqBF_2t_ip_src_HDL_Reciprocal_core
+ZynqBF_2tx_fpga/channel_estimator/ch_est/calc_inverse/HDL Reciprocal --> ZynqBF_2t_ip_src_HDL_Reciprocal
+ZynqBF_2tx_fpga/channel_estimator/ch_est/calc_inverse --> ZynqBF_2t_ip_src_calc_inverse
+ZynqBF_2tx_fpga/channel_estimator/ch_est/local_fsm --> ZynqBF_2t_ip_src_local_fsm
+ZynqBF_2tx_fpga/channel_estimator/ch_est/update_csi --> ZynqBF_2t_ip_src_update_csi
+ZynqBF_2tx_fpga/channel_estimator/ch_est/select_inputs --> ZynqBF_2t_ip_src_select_inputs_block
+ZynqBF_2tx_fpga/channel_estimator/ch_est --> ZynqBF_2t_ip_src_ch_est
+ZynqBF_2tx_fpga/channel_estimator --> ZynqBF_2t_ip_src_channel_estimator
+ZynqBF_2tx_fpga_tc --> ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc
+ZynqBF_2tx_fpga --> ZynqBF_2t_ip_src_ZynqBF_2tx_fpga

@@ -1,0 +1,1227 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Feb 11 10:26:50 2019
+# Process ID: 21324
+# Current directory: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0
+# Command line: vivado
+# Log file: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/vivado.log
+# Journal file: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ipcore'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ipcore/adi/library'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 6197.973 ; gain = 125.500 ; free physical = 128 ; free virtual = 9276
+update_compile_order -fileset sources_1
+create_fileset -simset sim_2
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+add_files -fileset sim_2 -norecurse /home/jason/matlab/Projects/ZynqBF_2tx/simulation/ZynqBF_2tx_tb.vhd
+update_compile_order -fileset sim_2
+set_property top ZynqBF_2tx_tb [get_filesets sim_2]
+set_property top_lib xil_defaultlib [get_filesets sim_2]
+current_fileset -simset [ get_filesets sim_2 ]
+update_compile_order -fileset sim_2
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+add_files -fileset sim_2 {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_fir_q.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_fir_i.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_Addressable_Delay_Line_block2.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_Addressable_Delay_Line_block1.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_pd_ch2.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_fir_i_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_Addressable_Delay_Line.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_pd_ch1.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_Addressable_Delay_Line_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_axi_lite.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_dut.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_fir_q_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd}
+update_compile_order -fileset sim_2
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_goldSequences
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_gs_selector
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_data_in
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlation_config
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_get_bit
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_gold_sequences
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_shift_rx
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator_en
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_sum_elements_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_all_u
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peak_fsm
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_running_max
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_store_index
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_select_inputs
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ram_rd_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ram_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_data_in_block
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlation_config_block
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_gold_sequences_block
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator_en_block
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peak_fsm_block
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_running_max_block
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_store_index_block
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_state_machine
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_q_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_i_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_in_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_bram
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_Detect_Change
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_select_inputs_block
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_HDL_Reciprocal_core
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_HDL_Reciprocal
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_calc_inverse
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_local_fsm
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_update_csi
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ch_est
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/simulation/ZynqBF_2tx_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2tx_tb
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.zynqbf_2t_ip_src_zynqbf_2tx_fpga...
+Compiling module xil_defaultlib.glbl
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSequences [zynqbf_2t_ip_src_goldsequences_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gs_selector [zynqbf_2t_ip_src_gs_selector_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_ram_i [zynqbf_2t_ip_src_rx_ram_i_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_i [zynqbf_2t_ip_src_correlator_i_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_sum_elements_i [zynqbf_2t_ip_src_sum_elements_i_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in [zynqbf_2t_ip_src_data_in_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_shift_rx [zynqbf_2t_ip_src_shift_rx_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en [zynqbf_2t_ip_src_correlator_en_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_all_u [zynqbf_2t_ip_src_all_u_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator1 [zynqbf_2t_ip_src_correlator1_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm [zynqbf_2t_ip_src_peak_fsm_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max [zynqbf_2t_ip_src_running_max_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index [zynqbf_2t_ip_src_store_index_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch1 [zynqbf_2t_ip_src_peakdetect_ch1_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs [zynqbf_2t_ip_src_select_inputs_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_rd_counter [zynqbf_2t_ip_src_ram_rd_counter_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_counter [zynqbf_2t_ip_src_ram_counter_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in_block [zynqbf_2t_ip_src_data_in_block_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config_block [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences_block [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en_block [zynqbf_2t_ip_src_correlator_en_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator2 [zynqbf_2t_ip_src_correlator2_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm_block [zynqbf_2t_ip_src_peak_fsm_block_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max_block [zynqbf_2t_ip_src_running_max_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index_block [zynqbf_2t_ip_src_store_index_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch2 [zynqbf_2t_ip_src_peakdetect_ch2_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_state_machine [zynqbf_2t_ip_src_state_machine_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_q_fifo [zynqbf_2t_ip_src_rx_q_fifo_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_i_fifo [zynqbf_2t_ip_src_rx_i_fifo_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_in_fifo [zynqbf_2t_ip_src_in_fifo_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_bram [zynqbf_2t_ip_src_rx_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_Detect_Change [zynqbf_2t_ip_src_detect_change_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs_block [zynqbf_2t_ip_src_select_inputs_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_HDL_Reciprocal_core [zynqbf_2t_ip_src_hdl_reciprocal_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_HDL_Reciprocal [zynqbf_2t_ip_src_hdl_reciprocal_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_calc_inverse [zynqbf_2t_ip_src_calc_inverse_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_local_fsm [zynqbf_2t_ip_src_local_fsm_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_update_csi [zynqbf_2t_ip_src_update_csi_defa...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ch_est [zynqbf_2t_ip_src_ch_est_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_channel_estimator [zynqbf_2t_ip_src_channel_estimat...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture behavioral of entity xil_defaultlib.zynqbf_2tx_tb
+Built simulation snapshot ZynqBF_2tx_tb_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xsim.dir/ZynqBF_2tx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xsim.dir/ZynqBF_2tx_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Feb 11 10:30:21 2019. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Feb 11 10:30:21 2019...
+run_program: Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 6340.047 ; gain = 0.000 ; free physical = 421 ; free virtual = 9288
+INFO: [USF-XSim-69] 'elaborate' step finished in '19' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ZynqBF_2tx_tb_behav -key {Behavioral:sim_2:Functional:ZynqBF_2tx_tb} -tclbatch {ZynqBF_2tx_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source ZynqBF_2tx_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: File rx_test_i.txt is not open. Cannot call endfile on it
+Time: 200 ns  Iteration: 0  Process: /ZynqBF_2tx_tb/rx_in_proc
+  File: /home/jason/matlab/Projects/ZynqBF_2tx/simulation/ZynqBF_2tx_tb.vhd
+
+HDL Line: /home/jason/matlab/Projects/ZynqBF_2tx/simulation/ZynqBF_2tx_tb.vhd:121
+# source -notrace {../../../../ipcore/mw/projects/ad9361/common/mw_clk_constr.tcl}
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 6414.559 ; gain = 65.652 ; free physical = 338 ; free virtual = 9242
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ZynqBF_2tx_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 6414.559 ; gain = 76.430 ; free physical = 338 ; free virtual = 9242
+run 15000 us
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+add_files -fileset sim_2 -norecurse {/home/jason/matlab/Projects/ZynqBF_2tx/simulation/rx_test_i.txt /home/jason/matlab/Projects/ZynqBF_2tx/simulation/rx_test_q.txt}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ZynqBF_2tx_tb_behav -key {Behavioral:sim_2:Functional:ZynqBF_2tx_tb} -tclbatch {ZynqBF_2tx_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source ZynqBF_2tx_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+# source -notrace {../../../../ipcore/mw/projects/ad9361/common/mw_clk_constr.tcl}
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ZynqBF_2tx_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 305 ; free virtual = 9246
+run 15000 us
+run: Time (s): cpu = 00:00:38 ; elapsed = 00:08:34 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 406 ; free virtual = 9434
+save_wave_config {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg}
+add_files -fileset sim_2 -norecurse /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg
+set_property xsim.view /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg [get_filesets sim_2]
+save_wave_config {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ZynqBF_2tx_tb_behav -key {Behavioral:sim_2:Functional:ZynqBF_2tx_tb} -tclbatch {ZynqBF_2tx_tb.tcl} -view {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg
+source ZynqBF_2tx_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+# source -notrace {../../../../ipcore/mw/projects/ad9361/common/mw_clk_constr.tcl}
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ZynqBF_2tx_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 182 ; free virtual = 9086
+run 15000 us
+run: Time (s): cpu = 00:01:15 ; elapsed = 00:09:18 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 134 ; free virtual = 9042
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 us
+run 100 us
+run 100 us
+run 500 us
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 141 ; free virtual = 8899
+run 1000 us
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:27 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 140 ; free virtual = 8892
+run 500 us
+run: Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:14 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 144 ; free virtual = 8896
+run 100 us
+run 3000 us
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:01:42 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 280 ; free virtual = 9023
+run 3000 us
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:02:07 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 338 ; free virtual = 9104
+run 5000 us
+run: Time (s): cpu = 00:00:18 ; elapsed = 00:03:43 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 313 ; free virtual = 9079
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 12500 us
+run: Time (s): cpu = 00:00:17 ; elapsed = 00:08:07 . Memory (MB): peak = 6456.590 ; gain = 0.000 ; free physical = 262 ; free virtual = 8962
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 12500 us
+save_wave_config {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.zynqbf_2t_ip_src_zynqbf_2tx_fpga...
+Compiling module xil_defaultlib.glbl
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSequences [zynqbf_2t_ip_src_goldsequences_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gs_selector [zynqbf_2t_ip_src_gs_selector_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_ram_i [zynqbf_2t_ip_src_rx_ram_i_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_i [zynqbf_2t_ip_src_correlator_i_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_sum_elements_i [zynqbf_2t_ip_src_sum_elements_i_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in [zynqbf_2t_ip_src_data_in_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_shift_rx [zynqbf_2t_ip_src_shift_rx_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en [zynqbf_2t_ip_src_correlator_en_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_all_u [zynqbf_2t_ip_src_all_u_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator1 [zynqbf_2t_ip_src_correlator1_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm [zynqbf_2t_ip_src_peak_fsm_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max [zynqbf_2t_ip_src_running_max_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index [zynqbf_2t_ip_src_store_index_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch1 [zynqbf_2t_ip_src_peakdetect_ch1_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs [zynqbf_2t_ip_src_select_inputs_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_rd_counter [zynqbf_2t_ip_src_ram_rd_counter_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_counter [zynqbf_2t_ip_src_ram_counter_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in_block [zynqbf_2t_ip_src_data_in_block_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config_block [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences_block [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en_block [zynqbf_2t_ip_src_correlator_en_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator2 [zynqbf_2t_ip_src_correlator2_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm_block [zynqbf_2t_ip_src_peak_fsm_block_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max_block [zynqbf_2t_ip_src_running_max_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index_block [zynqbf_2t_ip_src_store_index_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch2 [zynqbf_2t_ip_src_peakdetect_ch2_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_state_machine [zynqbf_2t_ip_src_state_machine_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_q_fifo [zynqbf_2t_ip_src_rx_q_fifo_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_i_fifo [zynqbf_2t_ip_src_rx_i_fifo_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_in_fifo [zynqbf_2t_ip_src_in_fifo_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_bram [zynqbf_2t_ip_src_rx_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_Detect_Change [zynqbf_2t_ip_src_detect_change_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs_block [zynqbf_2t_ip_src_select_inputs_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_HDL_Reciprocal_core [zynqbf_2t_ip_src_hdl_reciprocal_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_HDL_Reciprocal [zynqbf_2t_ip_src_hdl_reciprocal_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_calc_inverse [zynqbf_2t_ip_src_calc_inverse_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_local_fsm [zynqbf_2t_ip_src_local_fsm_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_update_csi [zynqbf_2t_ip_src_update_csi_defa...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ch_est [zynqbf_2t_ip_src_ch_est_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_channel_estimator [zynqbf_2t_ip_src_channel_estimat...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture behavioral of entity xil_defaultlib.zynqbf_2tx_tb
+Built simulation snapshot ZynqBF_2tx_tb_behav
+run_program: Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 6478.129 ; gain = 0.000 ; free physical = 432 ; free virtual = 8830
+INFO: [USF-XSim-69] 'elaborate' step finished in '17' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ZynqBF_2tx_tb_behav -key {Behavioral:sim_2:Functional:ZynqBF_2tx_tb} -tclbatch {ZynqBF_2tx_tb.tcl} -view {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg
+source ZynqBF_2tx_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+# source -notrace {../../../../ipcore/mw/projects/ad9361/common/mw_clk_constr.tcl}
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ZynqBF_2tx_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 6494.551 ; gain = 16.422 ; free physical = 401 ; free virtual = 8809
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 12500 us
+run: Time (s): cpu = 00:00:15 ; elapsed = 00:07:51 . Memory (MB): peak = 6494.551 ; gain = 0.000 ; free physical = 169 ; free virtual = 8768
+save_wave_config {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg}
+save_wave_config {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_goldSequences
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ram_rd_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ch_est
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.zynqbf_2t_ip_src_zynqbf_2tx_fpga...
+Compiling module xil_defaultlib.glbl
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSequences [zynqbf_2t_ip_src_goldsequences_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gs_selector [zynqbf_2t_ip_src_gs_selector_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_ram_i [zynqbf_2t_ip_src_rx_ram_i_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_i [zynqbf_2t_ip_src_correlator_i_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_sum_elements_i [zynqbf_2t_ip_src_sum_elements_i_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in [zynqbf_2t_ip_src_data_in_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_shift_rx [zynqbf_2t_ip_src_shift_rx_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en [zynqbf_2t_ip_src_correlator_en_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_all_u [zynqbf_2t_ip_src_all_u_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator1 [zynqbf_2t_ip_src_correlator1_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm [zynqbf_2t_ip_src_peak_fsm_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max [zynqbf_2t_ip_src_running_max_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index [zynqbf_2t_ip_src_store_index_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch1 [zynqbf_2t_ip_src_peakdetect_ch1_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs [zynqbf_2t_ip_src_select_inputs_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_rd_counter [zynqbf_2t_ip_src_ram_rd_counter_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_counter [zynqbf_2t_ip_src_ram_counter_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in_block [zynqbf_2t_ip_src_data_in_block_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config_block [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences_block [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en_block [zynqbf_2t_ip_src_correlator_en_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator2 [zynqbf_2t_ip_src_correlator2_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm_block [zynqbf_2t_ip_src_peak_fsm_block_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max_block [zynqbf_2t_ip_src_running_max_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index_block [zynqbf_2t_ip_src_store_index_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch2 [zynqbf_2t_ip_src_peakdetect_ch2_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_state_machine [zynqbf_2t_ip_src_state_machine_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_q_fifo [zynqbf_2t_ip_src_rx_q_fifo_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_i_fifo [zynqbf_2t_ip_src_rx_i_fifo_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_in_fifo [zynqbf_2t_ip_src_in_fifo_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_bram [zynqbf_2t_ip_src_rx_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_Detect_Change [zynqbf_2t_ip_src_detect_change_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs_block [zynqbf_2t_ip_src_select_inputs_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_HDL_Reciprocal_core [zynqbf_2t_ip_src_hdl_reciprocal_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_HDL_Reciprocal [zynqbf_2t_ip_src_hdl_reciprocal_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_calc_inverse [zynqbf_2t_ip_src_calc_inverse_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_local_fsm [zynqbf_2t_ip_src_local_fsm_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_update_csi [zynqbf_2t_ip_src_update_csi_defa...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ch_est [zynqbf_2t_ip_src_ch_est_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_channel_estimator [zynqbf_2t_ip_src_channel_estimat...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture behavioral of entity xil_defaultlib.zynqbf_2tx_tb
+Built simulation snapshot ZynqBF_2tx_tb_behav
+run_program: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 6614.664 ; gain = 0.000 ; free physical = 419 ; free virtual = 8131
+INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ZynqBF_2tx_tb_behav -key {Behavioral:sim_2:Functional:ZynqBF_2tx_tb} -tclbatch {ZynqBF_2tx_tb.tcl} -view {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg
+source ZynqBF_2tx_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+# source -notrace {../../../../ipcore/mw/projects/ad9361/common/mw_clk_constr.tcl}
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ZynqBF_2tx_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 6617.582 ; gain = 2.918 ; free physical = 376 ; free virtual = 8104
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 12500 us
+run: Time (s): cpu = 00:00:34 ; elapsed = 00:07:39 . Memory (MB): peak = 6617.582 ; gain = 0.000 ; free physical = 294 ; free virtual = 8084
+run 500 us
+run: Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:11 . Memory (MB): peak = 6617.582 ; gain = 0.000 ; free physical = 286 ; free virtual = 8077
+run 5000 us
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:02:26 . Memory (MB): peak = 6617.582 ; gain = 0.000 ; free physical = 223 ; free virtual = 8030
+run 5000 us
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:03:31 . Memory (MB): peak = 6617.582 ; gain = 0.000 ; free physical = 181 ; free virtual = 8010
+run 1000 us
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:48 . Memory (MB): peak = 6617.582 ; gain = 0.000 ; free physical = 173 ; free virtual = 8007
+run 5000 us
+run: Time (s): cpu = 00:00:18 ; elapsed = 00:04:00 . Memory (MB): peak = 6617.582 ; gain = 0.000 ; free physical = 192 ; free virtual = 8019
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 40 ms
+run: Time (s): cpu = 00:05:07 ; elapsed = 00:18:10 . Memory (MB): peak = 6705.582 ; gain = 88.000 ; free physical = 132 ; free virtual = 7994
+save_wave_config {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg}
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 20 ms
+run: Time (s): cpu = 00:02:51 ; elapsed = 00:11:08 . Memory (MB): peak = 6747.582 ; gain = 40.410 ; free physical = 134 ; free virtual = 7900
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+save_wave_config {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:47:32 ; elapsed = 00:00:06 . Memory (MB): peak = 6895.910 ; gain = 0.000 ; free physical = 386 ; free virtual = 7806
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+ERROR: [VRFC 10-408] cannot convert type integer to type std_logic_vector [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd:260]
+ERROR: [VRFC 10-408] cannot convert type integer to type std_logic_vector [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd:275]
+ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd:38]
+INFO: [VRFC 10-240] VHDL file /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 6895.910 ; gain = 0.000 ; free physical = 340 ; free virtual = 7806
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+ERROR: [VRFC 10-719] formal port/generic <reset> is not declared in <zynqbf_2t_ip_src_rx_ram_i> [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:258]
+ERROR: [VRFC 10-2666] formal port i has no actual or default value [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:254]
+ERROR: [VRFC 10-719] formal port/generic <reset> is not declared in <zynqbf_2t_ip_src_rx_ram_i> [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:273]
+ERROR: [VRFC 10-2666] formal port i has no actual or default value [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:269]
+ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:38]
+INFO: [VRFC 10-240] VHDL file /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_q_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_i_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_in_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_bram
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd:448]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd:450]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:450]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:452]
+ERROR: [VRFC 10-2666] formal port reset has no actual or default value [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd:29]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 6895.910 ; gain = 0.000 ; free physical = 235 ; free virtual = 7799
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_q_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_i_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_in_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_bram
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd:448]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd:450]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:450]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd:452]
+ERROR: [VRFC 10-2666] formal port reset has no actual or default value [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd:29]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 6895.910 ; gain = 0.000 ; free physical = 272 ; free virtual = 7797
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2666] formal port reset has no actual or default value [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd:29]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 6909.270 ; gain = 0.000 ; free physical = 257 ; free virtual = 7771
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_q_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_i_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_in_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_bram
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2666] formal port reset has no actual or default value [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd:29]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 6958.879 ; gain = 0.000 ; free physical = 245 ; free virtual = 7757
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property source_mgmt_mode All [current_project]
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2666] formal port reset has no actual or default value [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd:29]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 6958.879 ; gain = 0.000 ; free physical = 326 ; free virtual = 7816
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+ERROR: [VRFC 10-91] ram_rst is not declared [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd:95]
+ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd:39]
+INFO: [VRFC 10-240] VHDL file /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_SimpleDualPortRAM_generic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_q_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_i_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_in_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_bram
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2666] formal port ram_rst has no actual or default value [/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd:29]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7034.379 ; gain = 0.000 ; free physical = 306 ; free virtual = 7802
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZynqBF_2tx_tb' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_i.txt'
+INFO: [SIM-utils-43] Exported '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/rx_test_q.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+xvlog --incr --relax -prj ZynqBF_2tx_tb_vlog.prj
+xvhdl --incr --relax -prj ZynqBF_2tx_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_ram_i
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlator2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_peakdetect_ch2
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_q_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_i_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_in_fifo
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_rx_bram
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.zynqbf_2t_ip_src_zynqbf_2tx_fpga...
+Compiling module xil_defaultlib.glbl
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSequences [zynqbf_2t_ip_src_goldsequences_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gs_selector [zynqbf_2t_ip_src_gs_selector_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_ram_i [zynqbf_2t_ip_src_rx_ram_i_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_i [zynqbf_2t_ip_src_correlator_i_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_sum_elements_i [zynqbf_2t_ip_src_sum_elements_i_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in [zynqbf_2t_ip_src_data_in_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_shift_rx [zynqbf_2t_ip_src_shift_rx_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en [zynqbf_2t_ip_src_correlator_en_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_all_u [zynqbf_2t_ip_src_all_u_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator1 [zynqbf_2t_ip_src_correlator1_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm [zynqbf_2t_ip_src_peak_fsm_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max [zynqbf_2t_ip_src_running_max_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index [zynqbf_2t_ip_src_store_index_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch1 [zynqbf_2t_ip_src_peakdetect_ch1_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs [zynqbf_2t_ip_src_select_inputs_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_rd_counter [zynqbf_2t_ip_src_ram_rd_counter_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ram_counter [zynqbf_2t_ip_src_ram_counter_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_data_in_block [zynqbf_2t_ip_src_data_in_block_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlation_config_block [zynqbf_2t_ip_src_correlation_con...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_gold_sequences_block [zynqbf_2t_ip_src_gold_sequences_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator_en_block [zynqbf_2t_ip_src_correlator_en_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlator2 [zynqbf_2t_ip_src_correlator2_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peak_fsm_block [zynqbf_2t_ip_src_peak_fsm_block_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max_block [zynqbf_2t_ip_src_running_max_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_store_index_block [zynqbf_2t_ip_src_store_index_blo...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_peakdetect_ch2 [zynqbf_2t_ip_src_peakdetect_ch2_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_state_machine [zynqbf_2t_ip_src_state_machine_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_q_fifo [zynqbf_2t_ip_src_rx_q_fifo_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_i_fifo [zynqbf_2t_ip_src_rx_i_fifo_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_in_fifo [zynqbf_2t_ip_src_in_fifo_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_SimpleDualPortRAM_generic [\ZynqBF_2t_ip_src_SimpleDualPort...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_bram [zynqbf_2t_ip_src_rx_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_Detect_Change [zynqbf_2t_ip_src_detect_change_d...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_select_inputs_block [zynqbf_2t_ip_src_select_inputs_b...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_HDL_Reciprocal_core [zynqbf_2t_ip_src_hdl_reciprocal_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_HDL_Reciprocal [zynqbf_2t_ip_src_hdl_reciprocal_...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_calc_inverse [zynqbf_2t_ip_src_calc_inverse_de...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_local_fsm [zynqbf_2t_ip_src_local_fsm_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_update_csi [zynqbf_2t_ip_src_update_csi_defa...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ch_est [zynqbf_2t_ip_src_ch_est_default]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_channel_estimator [zynqbf_2t_ip_src_channel_estimat...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture behavioral of entity xil_defaultlib.zynqbf_2tx_tb
+Built simulation snapshot ZynqBF_2tx_tb_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xsim.dir/ZynqBF_2tx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xsim.dir/ZynqBF_2tx_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Feb 12 11:20:43 2019. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Feb 12 11:20:43 2019...
+run_program: Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 7074.398 ; gain = 0.000 ; free physical = 400 ; free virtual = 7757
+INFO: [USF-XSim-69] 'elaborate' step finished in '19' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ZynqBF_2tx_tb_behav -key {Behavioral:sim_2:Functional:ZynqBF_2tx_tb} -tclbatch {ZynqBF_2tx_tb.tcl} -view {/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/ZynqBF_2tx_tb_behav.wcfg
+source ZynqBF_2tx_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+# source -notrace {../../../../ipcore/mw/projects/ad9361/common/mw_clk_constr.tcl}
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ZynqBF_2tx_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 7136.504 ; gain = 62.105 ; free physical = 353 ; free virtual = 7728
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 15 ms
+run: Time (s): cpu = 00:02:27 ; elapsed = 00:09:54 . Memory (MB): peak = 7217.504 ; gain = 81.000 ; free physical = 117 ; free virtual = 7594
+run 25 ms
+run: Time (s): cpu = 00:05:01 ; elapsed = 00:15:07 . Memory (MB): peak = 7229.504 ; gain = 8.000 ; free physical = 133 ; free virtual = 7824

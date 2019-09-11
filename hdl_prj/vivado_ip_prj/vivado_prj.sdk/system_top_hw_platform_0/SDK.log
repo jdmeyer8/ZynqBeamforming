@@ -1,0 +1,5 @@
+16:45:05 INFO  : Registering command handlers for SDK TCF services
+16:45:10 INFO  : Launching XSCT server: xsct -n -interactive /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sdk/system_top_hw_platform_0/temp_xsdb_launch_script.tcl
+16:45:15 INFO  : XSCT server has started successfully.
+16:45:20 INFO  : Successfully done setting XSCT server connection channel  
+16:45:20 INFO  : Successfully done setting SDK workspace  

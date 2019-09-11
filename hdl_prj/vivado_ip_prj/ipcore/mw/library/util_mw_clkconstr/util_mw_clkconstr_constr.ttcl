@@ -1,0 +1,10 @@
+<: set ComponentName [getComponentNameString] :>
+<: setOutputDirectory "./" :>
+<: setFileName [ttcl_add $ComponentName "_constr"] :>
+<: setFileExtension ".xdc" :>
+<: setFileProcessingOrder early :>
+<: set period_ns [expr (1000 / double([getStringValue "CLKOUT0_REQUESTED_OUT_FREQ"]))] :>
+<: set clkName [ttcl_add "VirtClk_" $ComponentName ] :>
+
+# Create a virtual clock to store the period
+create_clock -name <=:$clkName:> -period <=:$period_ns:>

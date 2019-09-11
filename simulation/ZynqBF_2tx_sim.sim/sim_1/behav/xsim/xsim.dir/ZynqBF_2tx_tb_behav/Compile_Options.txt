@@ -1,0 +1,1 @@
+-wto "d6dad242fa8448e985b337bf1f38d691" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "ZynqBF_2tx_tb_behav" "xil_defaultlib.ZynqBF_2tx_tb" -log "elaborate.log" 

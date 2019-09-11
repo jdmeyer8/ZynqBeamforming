@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Feb  8 11:02:28 2019
+# Process ID: 4268
+# Current directory: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/prj_ip
+# Command line: vivado -mode batch -source vivado_ip_package.tcl
+# Log file: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/prj_ip/vivado.log
+# Journal file: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/prj_ip/vivado.jou
+#-----------------------------------------------------------
+source vivado_ip_package.tcl

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Apr  8 11:30:10 2019
+# Process ID: 4036
+# Current directory: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim
+# Command line: wbtcv -mode batch -source /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xsim.dir/ZynqBF_2tx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/webtalk.log
+# Journal file: /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.sim/sim_2/behav/xsim/xsim.dir/ZynqBF_2tx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr  8 11:30:11 2019...

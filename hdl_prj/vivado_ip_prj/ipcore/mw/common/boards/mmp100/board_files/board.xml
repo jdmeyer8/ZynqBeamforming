@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<board schema_version="2.0" vendor="em.avnet.com" name="mini_module_plus_7z100_rev_c" display_name="ZYNQ-7 Mini-Module Plus XC7Z100 RevC" url="http://www.zedboard.org/product/mini-module-plus" preset_file="preset.xml" >
+<compatible_board_revisions>
+  <revision id="0">C</revision>
+</compatible_board_revisions>
+<file_version>1.0</file_version>
+<description>ZYNQ-7 Mini-Module Plus XC7Z100 RevC</description>
+<components>
+  <component name="part0" display_name="ZYNQ-7 Mini-Module Plus XC7Z100 RevC" type="fpga" part_name="xc7z100ffg900-2" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="http://www.zedboard.org/product/mini-module-plus">
+    <interfaces>
+      <interface mode="master" name="dip_switches_8bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="dip_switches_8bits">
+        <port_maps>
+          <port_map logical_port="TRI_I" physical_port="dip_switches_8bits_tri_i" dir="in" left="7" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="dip_switches_8bits_tri_i_0"/> 
+              <pin_map port_index="1" component_pin="dip_switches_8bits_tri_i_1"/> 
+              <pin_map port_index="2" component_pin="dip_switches_8bits_tri_i_2"/> 
+              <pin_map port_index="3" component_pin="dip_switches_8bits_tri_i_3"/> 
+              <pin_map port_index="4" component_pin="dip_switches_8bits_tri_i_4"/> 
+              <pin_map port_index="5" component_pin="dip_switches_8bits_tri_i_5"/> 
+              <pin_map port_index="6" component_pin="dip_switches_8bits_tri_i_6"/> 
+              <pin_map port_index="7" component_pin="dip_switches_8bits_tri_i_7"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+      </interface>
+      <interface mode="master" name="led_5bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="led_5bits">
+        <port_maps>
+          <port_map logical_port="TRI_O" physical_port="led_5bits_tri_o" dir="out" left="4" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="led_5bits_tri_o_0"/> 
+              <pin_map port_index="1" component_pin="led_5bits_tri_o_1"/> 
+              <pin_map port_index="2" component_pin="led_5bits_tri_o_2"/> 
+              <pin_map port_index="3" component_pin="led_5bits_tri_o_3"/> 
+              <pin_map port_index="4" component_pin="led_5bits_tri_o_4"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+      </interface>
+      <interface mode="master" name="linear_flash" type="xilinx.com:interface:emc_rtl:1.0" of_component="linear_flash" preset_proc="emc_preset">
+        <port_maps>
+          <port_map logical_port="ADDR" physical_port="linear_flash_addr" dir="inout" left="26" right="1"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="linear_flash_addr_1"/> 
+              <pin_map port_index="1" component_pin="linear_flash_addr_2"/> 
+              <pin_map port_index="2" component_pin="linear_flash_addr_3"/> 
+              <pin_map port_index="3" component_pin="linear_flash_addr_4"/> 
+              <pin_map port_index="4" component_pin="linear_flash_addr_5"/> 
+              <pin_map port_index="5" component_pin="linear_flash_addr_6"/> 
+              <pin_map port_index="6" component_pin="linear_flash_addr_7"/> 
+              <pin_map port_index="7" component_pin="linear_flash_addr_8"/> 
+              <pin_map port_index="8" component_pin="linear_flash_addr_9"/> 
+              <pin_map port_index="9" component_pin="linear_flash_addr_10"/> 
+              <pin_map port_index="10" component_pin="linear_flash_addr_11"/> 
+              <pin_map port_index="11" component_pin="linear_flash_addr_12"/> 
+              <pin_map port_index="12" component_pin="linear_flash_addr_13"/> 
+              <pin_map port_index="13" component_pin="linear_flash_addr_14"/> 
+              <pin_map port_index="14" component_pin="linear_flash_addr_15"/> 
+              <pin_map port_index="15" component_pin="linear_flash_addr_16"/> 
+              <pin_map port_index="16" component_pin="linear_flash_addr_17"/> 
+              <pin_map port_index="17" component_pin="linear_flash_addr_18"/> 
+              <pin_map port_index="18" component_pin="linear_flash_addr_19"/> 
+              <pin_map port_index="19" component_pin="linear_flash_addr_20"/> 
+              <pin_map port_index="20" component_pin="linear_flash_addr_21"/> 
+              <pin_map port_index="21" component_pin="linear_flash_addr_22"/> 
+              <pin_map port_index="22" component_pin="linear_flash_addr_23"/> 
+              <pin_map port_index="23" component_pin="linear_flash_addr_24"/> 
+              <pin_map port_index="24" component_pin="linear_flash_addr_25"/> 
+              <pin_map port_index="25" component_pin="linear_flash_addr_26"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="DQ_O" physical_port="linear_flash_dq_o" dir="out" left="15" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="linear_flash_dq_i_0"/> 
+              <pin_map port_index="1" component_pin="linear_flash_dq_i_1"/> 
+              <pin_map port_index="2" component_pin="linear_flash_dq_i_2"/> 
+              <pin_map port_index="3" component_pin="linear_flash_dq_i_3"/> 
+              <pin_map port_index="4" component_pin="linear_flash_dq_i_4"/> 
+              <pin_map port_index="5" component_pin="linear_flash_dq_i_5"/> 
+              <pin_map port_index="6" component_pin="linear_flash_dq_i_6"/> 
+              <pin_map port_index="7" component_pin="linear_flash_dq_i_7"/> 
+              <pin_map port_index="8" component_pin="linear_flash_dq_i_8"/> 
+              <pin_map port_index="9" component_pin="linear_flash_dq_i_9"/> 
+              <pin_map port_index="10" component_pin="linear_flash_dq_i_10"/> 
+              <pin_map port_index="11" component_pin="linear_flash_dq_i_11"/> 
+              <pin_map port_index="12" component_pin="linear_flash_dq_i_12"/> 
+              <pin_map port_index="13" component_pin="linear_flash_dq_i_13"/> 
+              <pin_map port_index="14" component_pin="linear_flash_dq_i_14"/> 
+              <pin_map port_index="15" component_pin="linear_flash_dq_i_15"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="DQ_I" physical_port="linear_flash_dq_i" dir="in" left="15" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="linear_flash_dq_i_0"/> 
+              <pin_map port_index="1" component_pin="linear_flash_dq_i_1"/> 
+              <pin_map port_index="2" component_pin="linear_flash_dq_i_2"/> 
+              <pin_map port_index="3" component_pin="linear_flash_dq_i_3"/> 
+              <pin_map port_index="4" component_pin="linear_flash_dq_i_4"/> 
+              <pin_map port_index="5" component_pin="linear_flash_dq_i_5"/> 
+              <pin_map port_index="6" component_pin="linear_flash_dq_i_6"/> 
+              <pin_map port_index="7" component_pin="linear_flash_dq_i_7"/> 
+              <pin_map port_index="8" component_pin="linear_flash_dq_i_8"/> 
+              <pin_map port_index="9" component_pin="linear_flash_dq_i_9"/> 
+              <pin_map port_index="10" component_pin="linear_flash_dq_i_10"/> 
+              <pin_map port_index="11" component_pin="linear_flash_dq_i_11"/> 
+              <pin_map port_index="12" component_pin="linear_flash_dq_i_12"/> 
+              <pin_map port_index="13" component_pin="linear_flash_dq_i_13"/> 
+              <pin_map port_index="14" component_pin="linear_flash_dq_i_14"/> 
+              <pin_map port_index="15" component_pin="linear_flash_dq_i_15"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="DQ_T" physical_port="linear_flash_dq_t" dir="out" left="15" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="linear_flash_dq_i_0"/> 
+              <pin_map port_index="1" component_pin="linear_flash_dq_i_1"/> 
+              <pin_map port_index="2" component_pin="linear_flash_dq_i_2"/> 
+              <pin_map port_index="3" component_pin="linear_flash_dq_i_3"/> 
+              <pin_map port_index="4" component_pin="linear_flash_dq_i_4"/> 
+              <pin_map port_index="5" component_pin="linear_flash_dq_i_5"/> 
+              <pin_map port_index="6" component_pin="linear_flash_dq_i_6"/> 
+              <pin_map port_index="7" component_pin="linear_flash_dq_i_7"/> 
+              <pin_map port_index="8" component_pin="linear_flash_dq_i_8"/> 
+              <pin_map port_index="9" component_pin="linear_flash_dq_i_9"/> 
+              <pin_map port_index="10" component_pin="linear_flash_dq_i_10"/> 
+              <pin_map port_index="11" component_pin="linear_flash_dq_i_11"/> 
+              <pin_map port_index="12" component_pin="linear_flash_dq_i_12"/> 
+              <pin_map port_index="13" component_pin="linear_flash_dq_i_13"/> 
+              <pin_map port_index="14" component_pin="linear_flash_dq_i_14"/> 
+              <pin_map port_index="15" component_pin="linear_flash_dq_i_15"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="ADV_LDN" physical_port="linear_flash_adv_ldn" dir="inout">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="linear_flash_adv_ldn"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="OEN" physical_port="linear_flash_oen" dir="inout">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="linear_flash_oen"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="WEN" physical_port="linear_flash_wen" dir="inout">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="linear_flash_wen"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="CE_N" physical_port="linear_flash_ce_n" dir="inout">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="linear_flash_ce_n"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+        <parameters>
+          <parameter name="c_mem_size_mem_0" value="67108864" />
+          <parameter name="c_tavdv_ps_mem_0" value="130000" />
+          <parameter name="c_tcedv_ps_mem_0" value="130000" />
+          <parameter name="c_thzce_ps_mem_0" value="35000" />
+          <parameter name="c_thzoe_ps_mem_0" value="35000" />
+          <parameter name="c_tlzwe_ps_mem_0" value="35000" />
+          <parameter name="c_tpacc_ps_mem_0" value="25000" />
+          <parameter name="c_twc_ps_mem_0" value="70000" />
+          <parameter name="c_twph_ps_mem_0" value="70000" />
+          <parameter name="c_twp_ps_mem_0" value="12000" />
+          <parameter name="c_wr_rec_time_mem_0" value="270000000" />
+       </parameters>
+      </interface>
+      <interface mode="slave" name="mgt_clk" type="xilinx.com:interface:diff_clock_rtl:1.0" of_component="mgt_clk">
+        <port_maps>
+          <port_map logical_port="CLK_P" physical_port="mgt_clkp" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="mgt_clkp"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="CLK_N" physical_port="mgt_clkn" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="mgt_clkn"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+        <parameters>
+          <parameter name="type" value="ETH_MGT_CLK" />
+          <parameter name="frequency" value="125000000" />
+       </parameters>
+      </interface>
+      <interface mode="master" name="ps7_fixedio" type="xilinx.com:display_processing_system7:fixedio_rtl:1.0" of_component="ps7_fixedio" preset_proc="ps7_preset"> 
+      </interface>
+      <interface mode="master" name="push_switches_3bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="push_switches_3bits">
+        <port_maps>
+          <port_map logical_port="TRI_I" physical_port="push_switches_3bits_tri_i" dir="in" left="2" right="0"> 
+            <pin_maps>
+              <pin_map port_index="0" component_pin="push_switches_3bits_tri_i_0"/> 
+              <pin_map port_index="1" component_pin="push_switches_3bits_tri_i_1"/> 
+              <pin_map port_index="2" component_pin="push_switches_3bits_tri_i_2"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+      </interface>
+      <interface mode="slave" name="reset" type="xilinx.com:signal:reset_rtl:1.0" of_component="reset">
+        <port_maps>
+          <port_map logical_port="RESET" physical_port="reset" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="reset"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+        <parameters>
+          <parameter name="rst_polarity" value="1" />
+       </parameters>
+      </interface>
+      <interface mode="master" name="sfp" type="xilinx.com:interface:sfp_rtl:1.0" of_component="sfp">
+        <port_maps>
+          <port_map logical_port="TXN" physical_port="sfp_txn" dir="out">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="sfp_sgmii_txn"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="TXP" physical_port="sfp_txp" dir="out">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="sfp_sgmii_txp"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="RXN" physical_port="sfp_rxn" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="sfp_rxn"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="RXP" physical_port="sfp_rxp" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="sfp_rxp"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+        <parameters>
+          <parameter name="gt_loc" value="GTXE2_CHANNEL_X0Y1" />
+       </parameters>
+      </interface>
+      <interface mode="master" name="sfp_sgmii" type="xilinx.com:interface:sgmii_rtl:1.0" of_component="sfp_sgmii">
+        <port_maps>
+          <port_map logical_port="TXN" physical_port="sfp_sgmii_txn" dir="out">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="sfp_sgmii_txn"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="TXP" physical_port="sfp_sgmii_txp" dir="out">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="sfp_sgmii_txp"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="RXN" physical_port="sfp_sgmii_rxn" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="sfp_rxn"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="RXP" physical_port="sfp_sgmii_rxp" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="sfp_rxp"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+        <parameters>
+          <parameter name="gt_loc" value="GTXE2_CHANNEL_X0Y1" />
+       </parameters>
+      </interface>
+      <interface mode="slave" name="sys_diff_clock" type="xilinx.com:interface:diff_clock_rtl:1.0" of_component="sys_diff_clock">
+        <port_maps>
+          <port_map logical_port="CLK_P" physical_port="clk_p" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="clk_p"/> 
+            </pin_maps>
+          </port_map>
+          <port_map logical_port="CLK_N" physical_port="clk_n" dir="in">
+            <pin_maps>
+              <pin_map port_index="0" component_pin="clk_n"/> 
+            </pin_maps>
+          </port_map>
+        </port_maps>
+        <parameters>
+          <parameter name="frequency" value="200000000" />
+       </parameters>
+      </interface>
+    </interfaces>
+  </component>
+  <component name="dip_switches_8bits" display_name="dip_switches_8bits" type="chip" sub_type="switch" major_group="gpio"/>
+  <component name="led_5bits" display_name="led_5bits" type="chip" sub_type="led" major_group="gpio"/>
+  <component name="linear_flash" display_name="linear_flash" type="chip" sub_type="memory_flash_bpi" major_group="memories"/>
+  <component name="mgt_clk" display_name="mgt_clk" type="chip" sub_type="system_clock" major_group="clock"/>
+  <component name="ps7_fixedio" display_name="ps7_fixedio" type="chip" sub_type="fixed_io" major_group=""/>
+  <component name="push_switches_3bits" display_name="push_switches_3bits" type="chip" sub_type="switch" major_group="gpio"/>
+  <component name="reset" display_name="reset" type="chip" sub_type="reset" major_group="reset"/>
+  <component name="sfp" display_name="sfp" type="chip" sub_type="ethernet" major_group="ethernet"/>
+  <component name="sfp_sgmii" display_name="sfp_sgmii" type="chip" sub_type="ethernet" major_group="ethernet"/>
+  <component name="sys_diff_clock" display_name="sys_diff_clock" type="chip" sub_type="system_clock" major_group="clock"/>
+</components>
+<jtag_chains>
+  <jtag_chain name="chain1">
+    <position name="0" component="part0"/>
+  </jtag_chain>
+</jtag_chains>
+<connections>
+  <connection name="part0_dip_switches_8bits" component1="part0" component2="dip_switches_8bits">
+    <connection_map name="part0_dip_switches_8bits_1" c1_st_index="2" c1_end_index="9" c2_st_index="0" c2_end_index="7"/>
+  </connection>
+  <connection name="part0_led_5bits" component1="part0" component2="led_5bits">
+    <connection_map name="part0_led_5bits_1" c1_st_index="10" c1_end_index="14" c2_st_index="0" c2_end_index="4"/>
+  </connection>
+  <connection name="part0_linear_flash" component1="part0" component2="linear_flash">
+    <connection_map name="part0_linear_flash_1" c1_st_index="15" c1_end_index="60" c2_st_index="0" c2_end_index="45"/>
+  </connection>
+  <connection name="part0_mgt_clk" component1="part0" component2="mgt_clk">
+    <connection_map name="part0_mgt_clk_1" c1_st_index="61" c1_end_index="62" c2_st_index="0" c2_end_index="1"/>
+  </connection>
+  <connection name="part0_push_switches_3bits" component1="part0" component2="push_switches_3bits">
+    <connection_map name="part0_push_switches_3bits_1" c1_st_index="63" c1_end_index="65" c2_st_index="0" c2_end_index="2"/>
+  </connection>
+  <connection name="part0_reset" component1="part0" component2="reset">
+    <connection_map name="part0_reset_1" c1_st_index="66" c1_end_index="66" c2_st_index="0" c2_end_index="0"/>
+  </connection>
+  <connection name="part0_sfp" component1="part0" component2="sfp">
+    <connection_map name="part0_sfp_1" c1_st_index="67" c1_end_index="70" c2_st_index="0" c2_end_index="3"/>
+  </connection>
+  <connection name="part0_sfp_sgmii" component1="part0" component2="sfp_sgmii">
+    <connection_map name="part0_sfp_sgmii_1" c1_st_index="67" c1_end_index="70" c2_st_index="0" c2_end_index="3"/>
+  </connection>
+  <connection name="part0_sys_diff_clock" component1="part0" component2="sys_diff_clock">
+    <connection_map name="part0_sys_diff_clock_1" c1_st_index="0" c1_end_index="1" c2_st_index="0" c2_end_index="1"/>
+  </connection>
+</connections>
+</board>

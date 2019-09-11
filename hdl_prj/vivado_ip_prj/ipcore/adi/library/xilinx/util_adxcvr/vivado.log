@@ -1,0 +1,1558 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Oct 17 14:25:01 2018
+# Process ID: 10953
+# Current directory: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/xilinx/util_adxcvr
+# Command line: vivado -mode batch -source util_adxcvr_ip.tcl
+# Log file: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/xilinx/util_adxcvr/vivado.log
+# Journal file: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/xilinx/util_adxcvr/vivado.jou
+#-----------------------------------------------------------
+source util_adxcvr_ip.tcl
+# source ../../scripts/adi_env.tcl
+## set ad_hdl_dir [file normalize [file join [file dirname [info script]] "../.."]]
+## set ad_phdl_dir $ad_hdl_dir
+## if [info exists ::env(ADI_HDL_DIR)] {
+##   set ad_hdl_dir [file normalize $::env(ADI_HDL_DIR)]
+## }
+## if [info exists ::env(ADI_PHDL_DIR)] {
+##   set ad_phdl_dir [file normalize $::env(ADI_PHDL_DIR)]
+## }
+# source $ad_hdl_dir/library/scripts/adi_ip.tcl
+## set ad_hdl_dir [file normalize $::env(MW_ADI_HDL_DIR)]
+## source $ad_hdl_dir/library/scripts/adi_ip.tcl
+### if {![info exists REQUIRED_VIVADO_VERSION]} {
+###   set REQUIRED_VIVADO_VERSION "2017.4.1"
+### }
+### if {[info exists ::env(ADI_IGNORE_VERSION_CHECK)]} {
+###   set IGNORE_VERSION_CHECK 1
+### } elseif {![info exists IGNORE_VERSION_CHECK]} {
+###   set IGNORE_VERSION_CHECK 0
+### }
+### proc adi_ip_ttcl {ip_name ip_constr_files} {
+### 
+###   set proj_filegroup [ipx::get_file_groups -of_objects [ipx::current_core] -filter {NAME =~ *synthesis*}]
+###   set f [ipx::add_file $ip_constr_files $proj_filegroup]
+###   set_property -dict [list \
+###     type ttcl \
+###   ] $f
+###   ipx::reorder_files -front $ip_constr_files $proj_filegroup
+### }
+### proc adi_ip_bd {ip_name ip_bd_files} {
+###   set proj_filegroup [ipx::get_file_groups xilinx_blockdiagram -of_objects [ipx::current_core]]
+###   if {$proj_filegroup == {}} {
+###     set proj_filegroup [ipx::add_file_group -type xilinx_blockdiagram "" [ipx::current_core]]
+###   }
+###   set f [ipx::add_file $ip_bd_files $proj_filegroup]
+###   set_property -dict [list \
+###     type tclSource \
+###   ] $f
+### }
+### proc adi_ip_infer_streaming_interfaces {ip_name} {
+### 
+###   ipx::infer_bus_interfaces xilinx.com:interface:axis_rtl:1.0 [ipx::current_core]
+### 
+### }
+### proc adi_ip_infer_mm_interfaces {ip_name} {
+### 
+###   ipx::infer_bus_interfaces xilinx.com:interface:aximm_rtl:1.0 [ipx::current_core]
+### 
+### }
+### proc adi_set_ports_dependency {port_prefix dependency {driver_value {}}} {
+###   foreach port [ipx::get_ports [format "%s%s" $port_prefix "*"]] {
+###     set_property ENABLEMENT_DEPENDENCY $dependency $port
+###     if {$driver_value != {}} {
+###       set_property DRIVER_VALUE $driver_value $port
+###     }
+###   }
+### }
+### proc adi_set_bus_dependency {bus prefix dependency} {
+###   set_property ENABLEMENT_DEPENDENCY $dependency [ipx::get_bus_interfaces $bus -of_objects [ipx::current_core]]
+###   adi_set_ports_dependency $prefix $dependency
+### }
+### proc adi_add_port_map {bus phys logic} {
+###   set map [ipx::add_port_map $phys $bus]
+###   set_property "PHYSICAL_NAME" $phys $map
+###   set_property "LOGICAL_NAME" $logic $map
+### }
+### proc adi_add_bus {bus_name mode abs_type bus_type port_maps} {
+###   set bus [ipx::add_bus_interface $bus_name [ipx::current_core]]
+### 
+###   set_property "ABSTRACTION_TYPE_VLNV" $abs_type $bus
+###   set_property "BUS_TYPE_VLNV" $bus_type $bus
+###   set_property "INTERFACE_MODE" $mode $bus
+### 
+###   foreach port_map $port_maps {
+###     adi_add_port_map $bus {*}$port_map
+###   }
+### }
+### proc adi_add_multi_bus {num bus_name_prefix mode abs_type bus_type port_maps dependency} {
+###   for {set i 0} {$i < 8} {incr i} {
+###     set bus_name [format "%s%d" $bus_name_prefix $i]
+###     set bus [ipx::add_bus_interface $bus_name [ipx::current_core]]
+### 
+###     set_property "ABSTRACTION_TYPE_VLNV" $abs_type $bus
+###     set_property "BUS_TYPE_VLNV" $bus_type $bus
+###     set_property "INTERFACE_MODE" $mode $bus
+### 
+###     if {$dependency ne ""} {
+###       set bus_dependency [string map [list "{i}" $i] $dependency]
+###       set_property ENABLEMENT_DEPENDENCY $bus_dependency $bus
+###     }
+### 
+###     foreach port_map $port_maps {
+###       lassign $port_map phys logic width
+###       set map [ipx::add_port_map $phys $bus]
+###       set_property "PHYSICAL_NAME" $phys $map
+###       set_property "LOGICAL_NAME" $logic $map
+###       set_property "PHYSICAL_RIGHT" [expr $i*$width] $map
+###       set_property "PHYSICAL_LEFT" [expr ($i+1)*$width-1] $map
+###     }
+###   }
+### }
+### proc adi_add_bus_clock {clock_signal_name bus_inf_name {reset_signal_name ""} {reset_signal_mode "slave"}} {
+###   set bus_inf_name_clean [string map {":" "_"} $bus_inf_name]
+###   set clock_inf_name [format "%s%s" $bus_inf_name_clean "_signal_clock"]
+###   set clock_inf [ipx::add_bus_interface $clock_inf_name [ipx::current_core]]
+###   set_property abstraction_type_vlnv "xilinx.com:signal:clock_rtl:1.0" $clock_inf
+###   set_property bus_type_vlnv "xilinx.com:signal:clock:1.0" $clock_inf
+###   set_property display_name $clock_inf_name $clock_inf
+###   set clock_map [ipx::add_port_map "CLK" $clock_inf]
+###   set_property physical_name $clock_signal_name $clock_map
+### 
+###   set assoc_busif [ipx::add_bus_parameter "ASSOCIATED_BUSIF" $clock_inf]
+###   set_property value $bus_inf_name $assoc_busif
+### 
+###   if { $reset_signal_name != "" } {
+###     set assoc_reset [ipx::add_bus_parameter "ASSOCIATED_RESET" $clock_inf]
+###     set_property value $reset_signal_name $assoc_reset
+### 
+###     set reset_inf_name [format "%s%s" $bus_inf_name_clean "_signal_reset"]
+###     set reset_inf [ipx::add_bus_interface $reset_inf_name [ipx::current_core]]
+###     set_property abstraction_type_vlnv "xilinx.com:signal:reset_rtl:1.0" $reset_inf
+###     set_property bus_type_vlnv "xilinx.com:signal:reset:1.0" $reset_inf
+###     set_property display_name $reset_inf_name $reset_inf
+###     set_property interface_mode $reset_signal_mode $reset_inf
+###     set reset_map [ipx::add_port_map "RST" $reset_inf]
+###     set_property physical_name $reset_signal_name $reset_map
+### 
+###     set reset_polarity [ipx::add_bus_parameter "POLARITY" $reset_inf]
+###     if {[string match {*[Nn]} $reset_signal_name] == 1} {
+###       set_property value "ACTIVE_LOW" $reset_polarity
+###     } else {
+###       set_property value "ACTIVE_HIGH" $reset_polarity
+###     }
+###   }
+### }
+### proc adi_ip_add_core_dependencies {vlnvs} {
+###   foreach file_group [ipx::get_file_groups * -of_objects [ipx::current_core]] {
+###     foreach vlnv $vlnvs {
+###       ipx::add_subcore $vlnv $file_group
+###     }
+###   }
+### }
+### variable ip_constr_files
+### proc adi_ip_create {ip_name} {
+### 
+###   global ad_hdl_dir
+###   global ad_phdl_dir
+###   global ip_constr_files
+###   global REQUIRED_VIVADO_VERSION
+###   global IGNORE_VERSION_CHECK
+### 
+###   set VIVADO_VERSION [version -short]
+###   if {[string compare $VIVADO_VERSION $REQUIRED_VIVADO_VERSION] != 0} {
+###     puts -nonewline "CRITICAL WARNING: vivado version mismatch; "
+###     puts -nonewline "expected $REQUIRED_VIVADO_VERSION, "
+###     puts -nonewline "got $VIVADO_VERSION.\n"
+###   }
+### 
+###   create_project $ip_name . -force
+### 
+###   ## Load custom message severity definitions
+###   source $ad_hdl_dir/projects/scripts/adi_xilinx_msg.tcl
+### 
+###   set ip_constr_files ""
+###   set lib_dirs $ad_hdl_dir/library
+###   if {$ad_hdl_dir ne $ad_phdl_dir} {
+###     lappend lib_dirs $ad_phdl_dir/library
+###   }
+### 
+###   set_property ip_repo_paths $lib_dirs [current_fileset]
+###   update_ip_catalog
+### }
+### proc adi_ip_files {ip_name ip_files} {
+### 
+###   global ip_constr_files
+### 
+###   set ip_constr_files ""
+###   foreach m_file $ip_files {
+###     if {[file extension $m_file] eq ".xdc"} {
+###       lappend ip_constr_files $m_file
+###     }
+###   }
+### 
+###   set proj_fileset [get_filesets sources_1]
+###   add_files -norecurse -scan_for_includes -fileset $proj_fileset $ip_files
+###   set_property "top" "$ip_name" $proj_fileset
+### }
+### proc adi_ip_properties_lite {ip_name} {
+### 
+###   global ip_constr_files
+### 
+###   ipx::package_project -root_dir . -vendor analog.com -library user -taxonomy /Analog_Devices
+###   set_property name $ip_name [ipx::current_core]
+###   set_property vendor_display_name {Analog Devices} [ipx::current_core]
+###   set_property company_url {http://www.analog.com} [ipx::current_core]
+### 
+###   set i_families ""
+###   foreach i_part [get_parts] {
+###     lappend i_families [get_property FAMILY $i_part]
+###   }
+###   set i_families [lsort -unique $i_families]
+###   set s_families [get_property supported_families [ipx::current_core]]
+###   foreach i_family $i_families {
+###     set s_families "$s_families $i_family Production"
+###     set s_families "$s_families $i_family Beta"
+###   }
+###   set_property supported_families $s_families [ipx::current_core]
+###   ipx::save_core
+### 
+###   ipx::remove_all_bus_interface [ipx::current_core]
+###   set memory_maps [ipx::get_memory_maps * -of_objects [ipx::current_core]]
+###   foreach map $memory_maps {
+###     ipx::remove_memory_map [lindex $map 2] [ipx::current_core ]
+###   }
+###   ipx::save_core
+### 
+###   set i_filegroup [ipx::get_file_groups -of_objects [ipx::current_core] -filter {NAME =~ *synthesis*}]
+###   foreach i_file $ip_constr_files {
+###     set i_module [file tail $i_file]
+###     regsub {_constr\.xdc} $i_module {} i_module
+###     ipx::add_file $i_file $i_filegroup
+###     ipx::reorder_files -front $i_file $i_filegroup
+###     set_property SCOPED_TO_REF $i_module [ipx::get_files $i_file -of_objects $i_filegroup]
+###   }
+###   ipx::save_core
+### }
+### proc adi_ip_properties {ip_name} {
+### 
+###   adi_ip_properties_lite $ip_name
+### 
+###   ipx::infer_bus_interface {\
+###     s_axi_awvalid \
+###     s_axi_awaddr \
+###     s_axi_awprot \
+###     s_axi_awready \
+###     s_axi_wvalid \
+###     s_axi_wdata \
+###     s_axi_wstrb \
+###     s_axi_wready \
+###     s_axi_bvalid \
+###     s_axi_bresp \
+###     s_axi_bready \
+###     s_axi_arvalid \
+###     s_axi_araddr \
+###     s_axi_arprot \
+###     s_axi_arready \
+###     s_axi_rvalid \
+###     s_axi_rdata \
+###     s_axi_rresp \
+###     s_axi_rready} \
+###   xilinx.com:interface:aximm_rtl:1.0 [ipx::current_core]
+### 
+###   ipx::infer_bus_interface s_axi_aclk xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+###   ipx::infer_bus_interface s_axi_aresetn xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+### 
+###   set raddr_width [expr [get_property SIZE_LEFT [ipx::get_ports -nocase true s_axi_araddr -of_objects [ipx::current_core]]] + 1]
+###   set waddr_width [expr [get_property SIZE_LEFT [ipx::get_ports -nocase true s_axi_awaddr -of_objects [ipx::current_core]]] + 1]
+### 
+###   if {$raddr_width != $waddr_width} {
+###     puts [format "WARNING: AXI address width mismatch for %s (r=%d, w=%d)" $ip_name $raddr_width, $waddr_width]
+###     set range 65536
+###   } else {
+###     if {$raddr_width >= 16} {
+###       set range 65536
+###     } else {
+###       set range [expr 1 << $raddr_width]
+###     }
+###   }
+### 
+###   ipx::add_memory_map {s_axi} [ipx::current_core]
+###   set_property slave_memory_map_ref {s_axi} [ipx::get_bus_interfaces s_axi -of_objects [ipx::current_core]]
+###   ipx::add_address_block {axi_lite} [ipx::get_memory_maps s_axi -of_objects [ipx::current_core]]
+###   set_property range $range [ipx::get_address_blocks axi_lite \
+###     -of_objects [ipx::get_memory_maps s_axi -of_objects [ipx::current_core]]]
+###   ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces s_axi_aclk \
+###     -of_objects [ipx::current_core]]
+###   set_property value s_axi [ipx::get_bus_parameters ASSOCIATED_BUSIF \
+###     -of_objects [ipx::get_bus_interfaces s_axi_aclk \
+###     -of_objects [ipx::current_core]]]
+###   ipx::save_core
+### }
+### proc adi_if_define {name} {
+### 
+###   ipx::create_abstraction_definition analog.com interface ${name}_rtl 1.0
+###   ipx::create_bus_definition analog.com interface $name 1.0
+### 
+###   set_property xml_file_name ${name}_rtl.xml [ipx::current_busabs]
+###   set_property xml_file_name ${name}.xml [ipx::current_busdef]
+###   set_property bus_type_vlnv analog.com:interface:${name}:1.0 [ipx::current_busabs]
+### 
+###   ipx::save_abstraction_definition [ipx::current_busabs]
+###   ipx::save_bus_definition [ipx::current_busdef]
+### }
+### proc adi_if_ports {dir width name {type none}} {
+### 
+###   ipx::add_bus_abstraction_port $name [ipx::current_busabs]
+###   set m_intf [ipx::get_bus_abstraction_ports $name -of_objects [ipx::current_busabs]]
+###   set_property master_presence required $m_intf
+###   set_property slave_presence  required $m_intf
+###   set_property master_width $width $m_intf
+###   set_property slave_width  $width $m_intf
+### 
+###   set m_dir "in"
+###   set s_dir "out"
+###   if {$dir eq "output"} {
+###     set m_dir "out"
+###     set s_dir "in"
+###   }
+### 
+###   set_property master_direction $m_dir $m_intf
+###   set_property slave_direction  $s_dir $m_intf
+### 
+###   if {$type ne "none"} {
+###     set_property is_${type} true $m_intf
+###   }
+### 
+###   ipx::save_bus_definition [ipx::current_busdef]
+###   ipx::save_abstraction_definition [ipx::current_busabs]
+### }
+### proc adi_if_infer_bus {if_name mode name maps} {
+### 
+###   ipx::add_bus_interface $name [ipx::current_core]
+###   set m_bus_if [ipx::get_bus_interfaces $name -of_objects [ipx::current_core]]
+###   set_property abstraction_type_vlnv ${if_name}_rtl:1.0 $m_bus_if
+###   set_property bus_type_vlnv ${if_name}:1.0 $m_bus_if
+###   set_property interface_mode $mode $m_bus_if
+### 
+###   foreach map $maps  {
+###     set m_maps [regexp -all -inline {\S+} $map]
+###     lassign $m_maps p_name p_map
+###     ipx::add_port_map $p_name $m_bus_if
+###     set_property physical_name $p_map [ipx::get_port_maps $p_name -of_objects $m_bus_if]
+###   }
+### }
+## proc file_is_local { fileItem } {
+## 	set thisDir [pwd]
+## 	set fileItem [file normalize $fileItem]
+## 	return [regexp [string tolower $thisDir] [string tolower $fileItem]]
+## }
+## proc get_imported_file { fileItem} {
+## 	if { [file_is_local $fileItem] } {
+##         return $fileItem
+##     }
+##     set proj_fileset [get_filesets sources_1]
+## 	set f_name [file tail $fileItem]
+## 	set this_proj [current_project]
+## 	set import_dir "${this_proj}.srcs/${proj_fileset}/imports"
+## 	set imported [get_files -of [get_filesets $proj_fileset] $f_name]
+## 	if { [llength $imported] != 1 } {
+## 		puts "ERROR: Could not find imported version of $fileItem"
+## 		error_on_bad_command
+## 	}
+## 	set imported [file normalize $imported]
+## 	set imported [regsub ".*$import_dir" $imported $import_dir]
+## 	
+## 	return $imported
+## }
+## proc ip_import_files {} {
+## 	# import all non-local files
+## 	set fileList [get_files]
+## 	set thisDir [pwd]
+## 	set proj_fileset [get_filesets sources_1]
+## 	foreach fileItem $fileList {
+## 		if { ![file_is_local $fileItem] } {
+## 			import_file -fileset $proj_fileset $fileItem
+## 		}
+## 	}
+## }
+## proc adi_ip_files {ip_name ip_files} {
+## 
+##   global ip_constr_files
+##   set ip_constr_files ""
+## 
+##   set proj_fileset [get_filesets sources_1]
+##   add_files -norecurse -scan_for_includes -fileset $proj_fileset $ip_files
+##   set_property "top" "$ip_name" $proj_fileset
+##   ip_import_files
+##   
+##   foreach m_file $ip_files {
+##     if {[file extension $m_file] eq ".xdc"} {
+##       lappend ip_constr_files [get_imported_file $m_file]
+##     }
+##   }
+## }
+## proc adi_ip_ttcl {ip_name ip_constr_files} {
+## 
+##   set proj_filegroup [ipx::get_file_groups -of_objects [ipx::current_core] -filter {NAME =~ *synthesis*}]
+##   foreach m_file $ip_constr_files {
+##     set f [ipx::add_file [get_imported_file $m_file] $proj_filegroup]
+##     set_property -dict [list \
+##         type ttcl \
+##     ] $f
+##   }
+## }
+# adi_ip_create util_adxcvr
+CRITICAL WARNING: vivado version mismatch; expected 2017.4.1, got 2017.4.
+## set_msg_config -id {Vivado 12-1790} -string "Evaluation features should NOT be used in production systems." -new_severity WARNING
+## set_msg_config -id {BD 41-1343} -new_severity WARNING
+## set_msg_config -id {BD 41-1306} -new_severity WARNING
+## set_msg_config -severity {CRITICAL WARNING} -quiet -id {BD 41-1276} -new_severity ERROR
+## set_msg_config -id {IP_Flow 19-3656} -new_severity INFO
+## set_msg_config -id {IP_Flow 19-4623} -new_severity INFO
+## set_msg_config -id {IP_Flow 19-459} -new_severity INFO
+## set_msg_config -id {Place 30-73} -string "axi_spi" -new_severity WARNING
+## set_msg_config -string "PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY" -new_severity WARNING
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library'.
+INFO: [IP_Flow 19-3656] If you move the project, the path for repository '/home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/xilinx/util_adxcvr'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'.
+# adi_ip_files util_adxcvr [list \
+#   "util_adxcvr_constr.xdc" \
+#   "util_adxcvr_xcm.v" \
+#   "util_adxcvr_xch.v" \
+#   "util_adxcvr.v" ]
+# adi_ip_properties_lite util_adxcvr
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_0'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_1'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_10'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_11'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_12'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_13'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_14'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_15'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_2'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_3'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_4'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_5'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_6'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_7'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_8'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_9'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_0'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_1'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_10'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_11'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_12'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_13'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_14'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_15'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_2'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_3'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_4'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_5'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_6'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_7'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_8'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_9'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_0' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_1' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_10' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_11' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_12' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_13' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_14' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_15' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_16' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_17' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_18' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_19' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_2' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_20' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_21' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_22' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_23' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_24' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_25' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_26' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_27' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_28' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_29' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_3' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_30' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_31' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_4' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_5' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_6' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_7' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_8' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_0_9' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_0' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_1' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_10' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_11' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_12' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_13' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_14' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_15' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_16' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_17' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_18' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_19' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_2' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_20' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_21' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_22' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_23' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_24' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_25' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_26' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_27' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_28' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_29' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_3' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_30' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_31' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_4' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_5' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_6' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_7' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_8' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_10_9' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_0' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_1' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_10' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_11' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_12' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_13' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_14' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_15' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_16' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_17' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_18' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_19' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_2' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_20' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_21' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_22' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_23' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_24' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_25' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_26' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_27' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_28' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_29' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_3' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_30' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_31' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_4' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_5' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_6' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_7' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_8' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_11_9' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_12_0' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_12_1' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_12_10' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_12_11' of definition 'analog.com:interface:fifo_rd:1.0' (from User Repositories).
+INFO: [Common 17-14] Message 'IP_Flow 19-5107' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_0'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_1'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_10'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_11'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_12'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_13'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_14'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_15'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_2'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_3'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_4'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_5'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_6'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_7'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_8'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_9'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_0'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_1'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_10'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_11'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_12'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_13'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_14'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_15'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_2'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_3'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_4'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_5'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_6'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_7'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_8'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'up_sel_9'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_0'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_1'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_10'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_11'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_12'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_13'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_14'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_15'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_2'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_3'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_4'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_5'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_6'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_7'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_8'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'rx_9'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_0'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_1'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_10'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_11'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_12'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_13'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_14'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_15'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_2'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_3'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_4'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_5'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_6'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_7'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_8'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'tx_9'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '15:0' is present in all ports of the interface 'up_cm_0'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '15:0' is present in all ports of the interface 'up_cm_12'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '15:0' is present in all ports of the interface 'up_cm_4'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '15:0' is present in all ports of the interface 'up_cm_8'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [Common 17-14] Message 'IP_Flow 19-5151' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_0' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_1' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_10' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_11' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_12' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_13' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_14' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_15' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_2' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_3' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_4' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_5' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_6' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_7' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_8' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_0_9' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_0' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_1' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_10' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_11' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_12' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_13' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_14' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_15' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_2' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_3' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_4' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_5' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_6' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_7' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_8' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_12_9' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_0' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_1' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_10' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_11' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_12' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_13' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_14' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_15' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_2' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_3' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_4' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_5' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_6' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_7' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_8' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_4_9' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_0' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_1' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_10' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_11' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_12' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_13' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_14' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_15' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_2' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_3' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_4' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_5' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_6' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_7' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_8' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_cm_8_9' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_0' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_1' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_10' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_11' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_12' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_13' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_14' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_15' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_2' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_3' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_4' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_5' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_6' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_7' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_8' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_0_9' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_0' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_1' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_10' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_11' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_12' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_13' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_14' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_15' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_2' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_3' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_4' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_5' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_6' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_7' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_8' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_10_9' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_11_0' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_11_1' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_11_10' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+WARNING: [IP_Flow 19-4747] Not inferring AXIMM interface 'up_es_11_11' due to missing slave read-channel signals ARADDR ARVALID ARREADY RVALID RREADY.
+INFO: [Common 17-14] Message 'IP_Flow 19-4747' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_rstn' as interface 'up_rstn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'up_rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'up_clk' as interface 'up_clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'up_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rstn'.
+INFO: [IP_Flow 19-4623] Unrecognized family  azynquplus.  Please verify spelling and reissue command to set the supported files.
+INFO: [IP_Flow 19-4623] Unrecognized family  azynquplus.  Please verify spelling and reissue command to set the supported files.
+INFO: [IP_Flow 19-4623] Unrecognized family  qkintexu.  Please verify spelling and reissue command to set the supported files.
+INFO: [IP_Flow 19-4623] Unrecognized family  qkintexu.  Please verify spelling and reissue command to set the supported files.
+# ipx::remove_all_bus_interface [ipx::current_core]
+# ipx::infer_bus_interface up_clk xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'up_clk' as interface 'up_clk'.
+# ipx::infer_bus_interface cpll_ref_clk_0 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_0' as interface 'cpll_ref_clk_0'.
+# ipx::infer_bus_interface cpll_ref_clk_1 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_1' as interface 'cpll_ref_clk_1'.
+# ipx::infer_bus_interface cpll_ref_clk_2 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_2' as interface 'cpll_ref_clk_2'.
+# ipx::infer_bus_interface cpll_ref_clk_3 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_3' as interface 'cpll_ref_clk_3'.
+# ipx::infer_bus_interface cpll_ref_clk_4 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_4' as interface 'cpll_ref_clk_4'.
+# ipx::infer_bus_interface cpll_ref_clk_5 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_5' as interface 'cpll_ref_clk_5'.
+# ipx::infer_bus_interface cpll_ref_clk_6 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_6' as interface 'cpll_ref_clk_6'.
+# ipx::infer_bus_interface cpll_ref_clk_7 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_7' as interface 'cpll_ref_clk_7'.
+# ipx::infer_bus_interface cpll_ref_clk_8 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_8' as interface 'cpll_ref_clk_8'.
+# ipx::infer_bus_interface cpll_ref_clk_9 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_9' as interface 'cpll_ref_clk_9'.
+# ipx::infer_bus_interface cpll_ref_clk_10 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_10' as interface 'cpll_ref_clk_10'.
+# ipx::infer_bus_interface cpll_ref_clk_11 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_11' as interface 'cpll_ref_clk_11'.
+# ipx::infer_bus_interface cpll_ref_clk_12 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_12' as interface 'cpll_ref_clk_12'.
+# ipx::infer_bus_interface cpll_ref_clk_13 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_13' as interface 'cpll_ref_clk_13'.
+# ipx::infer_bus_interface cpll_ref_clk_14 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_14' as interface 'cpll_ref_clk_14'.
+# ipx::infer_bus_interface cpll_ref_clk_15 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'cpll_ref_clk_15' as interface 'cpll_ref_clk_15'.
+# ipx::infer_bus_interface qpll_ref_clk_0 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'qpll_ref_clk_0' as interface 'qpll_ref_clk_0'.
+# ipx::infer_bus_interface qpll_ref_clk_4 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'qpll_ref_clk_4' as interface 'qpll_ref_clk_4'.
+# ipx::infer_bus_interface qpll_ref_clk_8 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'qpll_ref_clk_8' as interface 'qpll_ref_clk_8'.
+# ipx::infer_bus_interface qpll_ref_clk_12 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'qpll_ref_clk_12' as interface 'qpll_ref_clk_12'.
+# ipx::infer_bus_interface rx_out_clk_0 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_0' as interface 'rx_out_clk_0'.
+# ipx::infer_bus_interface rx_out_clk_1 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_1' as interface 'rx_out_clk_1'.
+# ipx::infer_bus_interface rx_out_clk_2 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_2' as interface 'rx_out_clk_2'.
+# ipx::infer_bus_interface rx_out_clk_3 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_3' as interface 'rx_out_clk_3'.
+# ipx::infer_bus_interface rx_out_clk_4 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_4' as interface 'rx_out_clk_4'.
+# ipx::infer_bus_interface rx_out_clk_5 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_5' as interface 'rx_out_clk_5'.
+# ipx::infer_bus_interface rx_out_clk_6 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_6' as interface 'rx_out_clk_6'.
+# ipx::infer_bus_interface rx_out_clk_7 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_7' as interface 'rx_out_clk_7'.
+# ipx::infer_bus_interface rx_out_clk_8 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_8' as interface 'rx_out_clk_8'.
+# ipx::infer_bus_interface rx_out_clk_9 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_9' as interface 'rx_out_clk_9'.
+# ipx::infer_bus_interface rx_out_clk_10 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_10' as interface 'rx_out_clk_10'.
+# ipx::infer_bus_interface rx_out_clk_11 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_11' as interface 'rx_out_clk_11'.
+# ipx::infer_bus_interface rx_out_clk_12 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_12' as interface 'rx_out_clk_12'.
+# ipx::infer_bus_interface rx_out_clk_13 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_13' as interface 'rx_out_clk_13'.
+# ipx::infer_bus_interface rx_out_clk_14 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_14' as interface 'rx_out_clk_14'.
+# ipx::infer_bus_interface rx_out_clk_15 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_out_clk_15' as interface 'rx_out_clk_15'.
+# ipx::infer_bus_interface tx_out_clk_0 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_0' as interface 'tx_out_clk_0'.
+# ipx::infer_bus_interface tx_out_clk_1 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_1' as interface 'tx_out_clk_1'.
+# ipx::infer_bus_interface tx_out_clk_2 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_2' as interface 'tx_out_clk_2'.
+# ipx::infer_bus_interface tx_out_clk_3 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_3' as interface 'tx_out_clk_3'.
+# ipx::infer_bus_interface tx_out_clk_4 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_4' as interface 'tx_out_clk_4'.
+# ipx::infer_bus_interface tx_out_clk_5 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_5' as interface 'tx_out_clk_5'.
+# ipx::infer_bus_interface tx_out_clk_6 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_6' as interface 'tx_out_clk_6'.
+# ipx::infer_bus_interface tx_out_clk_7 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_7' as interface 'tx_out_clk_7'.
+# ipx::infer_bus_interface tx_out_clk_8 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_8' as interface 'tx_out_clk_8'.
+# ipx::infer_bus_interface tx_out_clk_9 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_9' as interface 'tx_out_clk_9'.
+# ipx::infer_bus_interface tx_out_clk_10 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_10' as interface 'tx_out_clk_10'.
+# ipx::infer_bus_interface tx_out_clk_11 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_11' as interface 'tx_out_clk_11'.
+# ipx::infer_bus_interface tx_out_clk_12 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_12' as interface 'tx_out_clk_12'.
+# ipx::infer_bus_interface tx_out_clk_13 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_13' as interface 'tx_out_clk_13'.
+# ipx::infer_bus_interface tx_out_clk_14 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_14' as interface 'tx_out_clk_14'.
+# ipx::infer_bus_interface tx_out_clk_15 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_out_clk_15' as interface 'tx_out_clk_15'.
+# ipx::infer_bus_interface rx_clk_0 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_0' as interface 'rx_clk_0'.
+# ipx::infer_bus_interface rx_clk_1 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_1' as interface 'rx_clk_1'.
+# ipx::infer_bus_interface rx_clk_2 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_2' as interface 'rx_clk_2'.
+# ipx::infer_bus_interface rx_clk_3 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_3' as interface 'rx_clk_3'.
+# ipx::infer_bus_interface rx_clk_4 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_4' as interface 'rx_clk_4'.
+# ipx::infer_bus_interface rx_clk_5 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_5' as interface 'rx_clk_5'.
+# ipx::infer_bus_interface rx_clk_6 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_6' as interface 'rx_clk_6'.
+# ipx::infer_bus_interface rx_clk_7 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_7' as interface 'rx_clk_7'.
+# ipx::infer_bus_interface rx_clk_8 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_8' as interface 'rx_clk_8'.
+# ipx::infer_bus_interface rx_clk_9 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_9' as interface 'rx_clk_9'.
+# ipx::infer_bus_interface rx_clk_10 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_10' as interface 'rx_clk_10'.
+# ipx::infer_bus_interface rx_clk_11 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_11' as interface 'rx_clk_11'.
+# ipx::infer_bus_interface rx_clk_12 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_12' as interface 'rx_clk_12'.
+# ipx::infer_bus_interface rx_clk_13 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_13' as interface 'rx_clk_13'.
+# ipx::infer_bus_interface rx_clk_14 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_14' as interface 'rx_clk_14'.
+# ipx::infer_bus_interface rx_clk_15 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'rx_clk_15' as interface 'rx_clk_15'.
+# ipx::infer_bus_interface tx_clk_0 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_0' as interface 'tx_clk_0'.
+# ipx::infer_bus_interface tx_clk_1 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_1' as interface 'tx_clk_1'.
+# ipx::infer_bus_interface tx_clk_2 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_2' as interface 'tx_clk_2'.
+# ipx::infer_bus_interface tx_clk_3 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_3' as interface 'tx_clk_3'.
+# ipx::infer_bus_interface tx_clk_4 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_4' as interface 'tx_clk_4'.
+# ipx::infer_bus_interface tx_clk_5 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_5' as interface 'tx_clk_5'.
+# ipx::infer_bus_interface tx_clk_6 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_6' as interface 'tx_clk_6'.
+# ipx::infer_bus_interface tx_clk_7 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_7' as interface 'tx_clk_7'.
+# ipx::infer_bus_interface tx_clk_8 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_8' as interface 'tx_clk_8'.
+# ipx::infer_bus_interface tx_clk_9 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_9' as interface 'tx_clk_9'.
+# ipx::infer_bus_interface tx_clk_10 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_10' as interface 'tx_clk_10'.
+# ipx::infer_bus_interface tx_clk_11 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_11' as interface 'tx_clk_11'.
+# ipx::infer_bus_interface tx_clk_12 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_12' as interface 'tx_clk_12'.
+# ipx::infer_bus_interface tx_clk_13 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_13' as interface 'tx_clk_13'.
+# ipx::infer_bus_interface tx_clk_14 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_14' as interface 'tx_clk_14'.
+# ipx::infer_bus_interface tx_clk_15 xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'tx_clk_15' as interface 'tx_clk_15'.
+# ipx::infer_bus_interface up_rstn xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_rstn' as interface 'up_rstn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'up_rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'up_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rstn'.
+# ipx::infer_bus_interface up_cpll_rst_0 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_0' as interface 'up_cpll_rst_0'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_0': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_0'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_0 -reset up_cpll_rst_0 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_1 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_1' as interface 'up_cpll_rst_1'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_1': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_1'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_1 -reset up_cpll_rst_1 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_2 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_2' as interface 'up_cpll_rst_2'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_2': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_2'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_2 -reset up_cpll_rst_2 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_3 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_3' as interface 'up_cpll_rst_3'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_3': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_3'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_3 -reset up_cpll_rst_3 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_4 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_4' as interface 'up_cpll_rst_4'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_4': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_4'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_4 -reset up_cpll_rst_4 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_5 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_5' as interface 'up_cpll_rst_5'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_5': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_5'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_5 -reset up_cpll_rst_5 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_6 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_6' as interface 'up_cpll_rst_6'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_6': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_6'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_6 -reset up_cpll_rst_6 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_7 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_7' as interface 'up_cpll_rst_7'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_7': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_7'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_7 -reset up_cpll_rst_7 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_8 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_8' as interface 'up_cpll_rst_8'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_8': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_8'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_8 -reset up_cpll_rst_8 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_9 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_9' as interface 'up_cpll_rst_9'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_9': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_9'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_9 -reset up_cpll_rst_9 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_10 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_10' as interface 'up_cpll_rst_10'.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_10': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_10'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_10 -reset up_cpll_rst_10 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_11 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'up_cpll_rst_11' as interface 'up_cpll_rst_11'.
+INFO: [Common 17-14] Message 'IP_Flow 19-4753' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_11': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_11'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_11 -reset up_cpll_rst_11 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_12 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_12': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_12'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_12 -reset up_cpll_rst_12 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_13 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_13': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_13'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_13 -reset up_cpll_rst_13 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_14 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_14': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_14'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_14 -reset up_cpll_rst_14 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_cpll_rst_15 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_15': Added interface parameter 'ASSOCIATED_RESET' with value 'up_cpll_rst_15'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_15 -reset up_cpll_rst_15 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_qpll_rst_0 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_0': Added interface parameter 'ASSOCIATED_RESET' with value 'up_qpll_rst_0'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_0 -reset up_qpll_rst_0 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_qpll_rst_4 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_4': Added interface parameter 'ASSOCIATED_RESET' with value 'up_qpll_rst_4'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_4 -reset up_qpll_rst_4 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_qpll_rst_8 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_8': Added interface parameter 'ASSOCIATED_RESET' with value 'up_qpll_rst_8'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_8 -reset up_qpll_rst_8 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_qpll_rst_12 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_12': Added interface parameter 'ASSOCIATED_RESET' with value 'up_qpll_rst_12'.
+# ipx::associate_bus_interfaces -clock cpll_ref_clk_12 -reset up_qpll_rst_12 -clear [ipx::current_core]
+# ipx::infer_bus_interface up_rx_rst_0 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_0': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_0'.
+# ipx::infer_bus_interface up_rx_rst_1 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_1': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_1'.
+# ipx::infer_bus_interface up_rx_rst_2 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_2': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_2'.
+# ipx::infer_bus_interface up_rx_rst_3 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_3': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_3'.
+# ipx::infer_bus_interface up_rx_rst_4 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_4': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_4'.
+# ipx::infer_bus_interface up_rx_rst_5 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_5': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_5'.
+# ipx::infer_bus_interface up_rx_rst_6 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_6': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_6'.
+# ipx::infer_bus_interface up_rx_rst_7 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_7': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_7'.
+# ipx::infer_bus_interface up_rx_rst_8 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_8': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_8'.
+# ipx::infer_bus_interface up_rx_rst_9 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_9': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_9'.
+# ipx::infer_bus_interface up_rx_rst_10 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_10': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_10'.
+# ipx::infer_bus_interface up_rx_rst_11 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_11': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_11'.
+# ipx::infer_bus_interface up_rx_rst_12 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_12': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_12'.
+# ipx::infer_bus_interface up_rx_rst_13 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_13': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_13'.
+# ipx::infer_bus_interface up_rx_rst_14 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_14': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_14'.
+# ipx::infer_bus_interface up_rx_rst_15 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'cpll_ref_clk_15': Added interface parameter 'ASSOCIATED_RESET' with value 'up_rx_rst_15'.
+# ipx::infer_bus_interface up_tx_rst_0 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_1 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_2 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_3 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_4 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_5 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_6 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_7 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_8 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_9 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_10 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_11 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_12 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_13 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_14 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# ipx::infer_bus_interface up_tx_rst_15 xilinx.com:signal:reset_rtl:1.0 [ipx::current_core]
+# set_property driver_value 0 [ipx::get_ports -filter "direction==in" -of_objects [ipx::current_core]]
+# for {set n 0} {$n < 16} {incr n} {
+# 
+#   if {($n%4) == 0} {
+#   adi_if_infer_bus analog.com:interface:if_xcvr_cm slave up_cm_${n} [list \
+#     "enb                 up_cm_enb_${n}         "\
+#     "addr                up_cm_addr_${n}        "\
+#     "wr                  up_cm_wr_${n}          "\
+#     "wdata               up_cm_wdata_${n}       "\
+#     "rdata               up_cm_rdata_${n}       "\
+#     "ready               up_cm_ready_${n}       "]
+#   }
+# 
+#   adi_if_infer_bus analog.com:interface:if_xcvr_cm slave up_es_${n} [list \
+#     "enb                 up_es_enb_${n}         "\
+#     "addr                up_es_addr_${n}        "\
+#     "wr                  up_es_wr_${n}          "\
+#     "wdata               up_es_wdata_${n}       "\
+#     "rdata               up_es_rdata_${n}       "\
+#     "ready               up_es_ready_${n}       "]
+# 
+#   adi_if_infer_bus analog.com:interface:if_xcvr_ch slave up_rx_${n} [list \
+#     "pll_locked          up_rx_pll_locked_${n}  "\
+#     "rst                 up_rx_rst_${n}         "\
+#     "user_ready          up_rx_user_ready_${n}  "\
+#     "rst_done            up_rx_rst_done_${n}    "\
+#     "lpm_dfe_n           up_rx_lpm_dfe_n_${n}   "\
+#     "rate                up_rx_rate_${n}        "\
+#     "sys_clk_sel         up_rx_sys_clk_sel_${n} "\
+#     "out_clk_sel         up_rx_out_clk_sel_${n} "\
+#     "enb                 up_rx_enb_${n}         "\
+#     "addr                up_rx_addr_${n}        "\
+#     "wr                  up_rx_wr_${n}          "\
+#     "wdata               up_rx_wdata_${n}       "\
+#     "rdata               up_rx_rdata_${n}       "\
+#     "ready               up_rx_ready_${n}       "]
+# 
+#   adi_if_infer_bus analog.com:interface:if_xcvr_ch slave up_tx_${n} [list \
+#     "pll_locked          up_tx_pll_locked_${n}  "\
+#     "rst                 up_tx_rst_${n}         "\
+#     "user_ready          up_tx_user_ready_${n}  "\
+#     "rst_done            up_tx_rst_done_${n}    "\
+#     "lpm_dfe_n           up_tx_lpm_dfe_n_${n}   "\
+#     "rate                up_tx_rate_${n}        "\
+#     "sys_clk_sel         up_tx_sys_clk_sel_${n} "\
+#     "out_clk_sel         up_tx_out_clk_sel_${n} "\
+#     "enb                 up_tx_enb_${n}         "\
+#     "addr                up_tx_addr_${n}        "\
+#     "wr                  up_tx_wr_${n}          "\
+#     "wdata               up_tx_wdata_${n}       "\
+#     "rdata               up_tx_rdata_${n}       "\
+#     "ready               up_tx_ready_${n}       "]
+# 
+#   ipx::add_bus_interface rx_${n} [ipx::current_core]
+#   set_property abstraction_type_vlnv xilinx.com:display_jesd204:jesd204_rx_bus_rtl:1.0 \
+#     [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]
+#   set_property bus_type_vlnv xilinx.com:display_jesd204:jesd204_rx_bus:1.0 \
+#     [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]
+#   set_property interface_mode master [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]
+#   ipx::add_port_map rxcharisk [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]
+#   set_property physical_name rx_charisk_${n} [ipx::get_port_maps rxcharisk -of_objects \
+#     [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]]
+#   ipx::add_port_map rxnotintable [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]
+#   set_property physical_name rx_notintable_${n} [ipx::get_port_maps rxnotintable -of_objects \
+#     [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]]
+#   ipx::add_port_map rxdisperr [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]
+#   set_property physical_name rx_disperr_${n} [ipx::get_port_maps rxdisperr -of_objects \
+#     [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]]
+#   ipx::add_port_map rxdata [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]
+#   set_property physical_name rx_data_${n} [ipx::get_port_maps rxdata -of_objects \
+#     [ipx::get_bus_interfaces rx_${n} -of_objects [ipx::current_core]]]
+# 
+#   ipx::add_bus_interface tx_${n} [ipx::current_core]
+#   set_property abstraction_type_vlnv xilinx.com:display_jesd204:jesd204_tx_bus_rtl:1.0 \
+#     [ipx::get_bus_interfaces tx_${n} -of_objects [ipx::current_core]]
+#   set_property bus_type_vlnv xilinx.com:display_jesd204:jesd204_tx_bus:1.0 \
+#     [ipx::get_bus_interfaces tx_${n} -of_objects [ipx::current_core]]
+#   set_property interface_mode slave [ipx::get_bus_interfaces tx_${n} -of_objects [ipx::current_core]]
+#   ipx::add_port_map txcharisk [ipx::get_bus_interfaces tx_${n} -of_objects [ipx::current_core]]
+#   set_property physical_name tx_charisk_${n} [ipx::get_port_maps txcharisk -of_objects \
+#     [ipx::get_bus_interfaces tx_${n} -of_objects [ipx::current_core]]]
+#   ipx::add_port_map txdata [ipx::get_bus_interfaces tx_${n} -of_objects [ipx::current_core]]
+#   set_property physical_name tx_data_${n} [ipx::get_port_maps txdata -of_objects \
+#     [ipx::get_bus_interfaces tx_${n} -of_objects [ipx::current_core]]]
+# 
+# }
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_bus_interfaces up_es_0 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_bus_interfaces up_rx_0 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_bus_interfaces rx_0 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_ports rx_*0* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_ports up_rx_rst_0 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_bus_interfaces up_tx_0 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_bus_interfaces tx_0 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_ports tx_*0* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 0} \
+#   [ipx::get_ports up_tx_rst_0 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 0) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 0)} \
+#   [ipx::get_ports cpll_ref_clk_0 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_0 -of_objects [ipx::current_core]]
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 0) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 0)} \
+#   [ipx::get_ports qpll_ref_clk_0 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_qpll_rst_0 -of_objects [ipx::current_core]]
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 0) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 0)} \
+#   [ipx::get_bus_interfaces up_cm_0 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_bus_interfaces up_es_1 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_bus_interfaces up_rx_1 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_bus_interfaces rx_1 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_ports rx_*1* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_ports up_rx_rst_1 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_bus_interfaces up_tx_1 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_bus_interfaces tx_1 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_ports tx_*1* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 1} \
+#   [ipx::get_ports up_tx_rst_1 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 1) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 1)} \
+#   [ipx::get_ports cpll_ref_clk_1 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_1 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_bus_interfaces up_es_2 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_bus_interfaces up_rx_2 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_bus_interfaces rx_2 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_ports rx_*2* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_ports up_rx_rst_2 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_bus_interfaces up_tx_2 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_bus_interfaces tx_2 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_ports tx_*2* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 2} \
+#   [ipx::get_ports up_tx_rst_2 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 2) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 2)} \
+#   [ipx::get_ports cpll_ref_clk_2 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_2 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_bus_interfaces up_es_3 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_bus_interfaces up_rx_3 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_bus_interfaces rx_3 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_ports rx_*3* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_ports up_rx_rst_3 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_bus_interfaces up_tx_3 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_bus_interfaces tx_3 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_ports tx_*3* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 3} \
+#   [ipx::get_ports up_tx_rst_3 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 3) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 3)} \
+#   [ipx::get_ports cpll_ref_clk_3 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_3 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_bus_interfaces up_es_4 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_bus_interfaces up_rx_4 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_bus_interfaces rx_4 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_ports rx_*4* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_ports up_rx_rst_4 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_bus_interfaces up_tx_4 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_bus_interfaces tx_4 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_ports tx_*4* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 4} \
+#   [ipx::get_ports up_tx_rst_4 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 4) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 4)} \
+#   [ipx::get_ports cpll_ref_clk_4 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_4 -of_objects [ipx::current_core]]
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 4) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 4)} \
+#   [ipx::get_ports qpll_ref_clk_4 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_qpll_rst_4 -of_objects [ipx::current_core]]
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 4) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 4)} \
+#   [ipx::get_bus_interfaces up_cm_4 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_bus_interfaces up_es_5 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_bus_interfaces up_rx_5 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_bus_interfaces rx_5 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_ports rx_*5* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_ports up_rx_rst_5 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_bus_interfaces up_tx_5 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_bus_interfaces tx_5 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_ports tx_*5* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 5} \
+#   [ipx::get_ports up_tx_rst_5 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 5) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 5)} \
+#   [ipx::get_ports cpll_ref_clk_5 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_5 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_bus_interfaces up_es_6 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_bus_interfaces up_rx_6 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_bus_interfaces rx_6 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_ports rx_*6* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_ports up_rx_rst_6 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_bus_interfaces up_tx_6 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_bus_interfaces tx_6 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_ports tx_*6* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 6} \
+#   [ipx::get_ports up_tx_rst_6 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 6) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 6)} \
+#   [ipx::get_ports cpll_ref_clk_6 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_6 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_bus_interfaces up_es_7 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_bus_interfaces up_rx_7 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_bus_interfaces rx_7 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_ports rx_*7* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_ports up_rx_rst_7 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_bus_interfaces up_tx_7 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_bus_interfaces tx_7 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_ports tx_*7* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 7} \
+#   [ipx::get_ports up_tx_rst_7 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 7) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 7)} \
+#   [ipx::get_ports cpll_ref_clk_7 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_7 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_bus_interfaces up_es_8 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_bus_interfaces up_rx_8 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_bus_interfaces rx_8 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_ports rx_*8* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_ports up_rx_rst_8 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_bus_interfaces up_tx_8 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_bus_interfaces tx_8 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_ports tx_*8* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 8} \
+#   [ipx::get_ports up_tx_rst_8 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 8) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 8)} \
+#   [ipx::get_ports cpll_ref_clk_8 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_8 -of_objects [ipx::current_core]]
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 8) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 8)} \
+#   [ipx::get_ports qpll_ref_clk_8 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_qpll_rst_8 -of_objects [ipx::current_core]]
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 8) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 8)} \
+#   [ipx::get_bus_interfaces up_cm_8 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_bus_interfaces up_es_9 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_bus_interfaces up_rx_9 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_bus_interfaces rx_9 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_ports rx_*9* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_ports up_rx_rst_9 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_bus_interfaces up_tx_9 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_bus_interfaces tx_9 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_ports tx_*9* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 9} \
+#   [ipx::get_ports up_tx_rst_9 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 9) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 9)} \
+#   [ipx::get_ports cpll_ref_clk_9 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_9 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_bus_interfaces up_es_10 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_bus_interfaces up_rx_10 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_bus_interfaces rx_10 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_ports rx_*10* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_ports up_rx_rst_10 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_bus_interfaces up_tx_10 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_bus_interfaces tx_10 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_ports tx_*10* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 10} \
+#   [ipx::get_ports up_tx_rst_10 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 10) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 10)} \
+#   [ipx::get_ports cpll_ref_clk_10 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_10 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_bus_interfaces up_es_11 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_bus_interfaces up_rx_11 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_bus_interfaces rx_11 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_ports rx_*11* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_ports up_rx_rst_11 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_bus_interfaces up_tx_11 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_bus_interfaces tx_11 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_ports tx_*11* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 11} \
+#   [ipx::get_ports up_tx_rst_11 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 11) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 11)} \
+#   [ipx::get_ports cpll_ref_clk_11 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_11 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_bus_interfaces up_es_12 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_bus_interfaces up_rx_12 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_bus_interfaces rx_12 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_ports rx_*12* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_ports up_rx_rst_12 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_bus_interfaces up_tx_12 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_bus_interfaces tx_12 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_ports tx_*12* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 12} \
+#   [ipx::get_ports up_tx_rst_12 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 12) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 12)} \
+#   [ipx::get_ports cpll_ref_clk_12 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_12 -of_objects [ipx::current_core]]
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 12) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 12)} \
+#   [ipx::get_ports qpll_ref_clk_12 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_qpll_rst_12 -of_objects [ipx::current_core]]
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 12) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 12)} \
+#   [ipx::get_bus_interfaces up_cm_12 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_bus_interfaces up_es_13 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_bus_interfaces up_rx_13 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_bus_interfaces rx_13 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_ports rx_*13* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_ports up_rx_rst_13 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_bus_interfaces up_tx_13 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_bus_interfaces tx_13 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_ports tx_*13* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 13} \
+#   [ipx::get_ports up_tx_rst_13 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 13) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 13)} \
+#   [ipx::get_ports cpll_ref_clk_13 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_13 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_bus_interfaces up_es_14 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_bus_interfaces up_rx_14 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_bus_interfaces rx_14 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_ports rx_*14* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_ports up_rx_rst_14 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_bus_interfaces up_tx_14 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_bus_interfaces tx_14 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_ports tx_*14* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 14} \
+#   [ipx::get_ports up_tx_rst_14 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 14) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 14)} \
+#   [ipx::get_ports cpll_ref_clk_14 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_14 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_bus_interfaces up_es_15 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_bus_interfaces up_rx_15 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_bus_interfaces rx_15 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_ports rx_*15* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_ports up_rx_rst_15 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_bus_interfaces up_tx_15 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_bus_interfaces tx_15 -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_ports tx_*15* -of_objects [ipx::current_core]]
+# set_property enablement_dependency {spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 15} \
+#   [ipx::get_ports up_tx_rst_15 -of_objects [ipx::current_core]] \
+# 
+# set_property enablement_dependency \
+#   {(spirit:decode(id('MODELPARAM_VALUE.TX_NUM_OF_LANES')) > 15) or \
+#   (spirit:decode(id('MODELPARAM_VALUE.RX_NUM_OF_LANES')) > 15)} \
+#   [ipx::get_ports cpll_ref_clk_15 -of_objects [ipx::current_core]] \
+#   [ipx::get_ports up_cpll_rst_15 -of_objects [ipx::current_core]]
+# ipx::save_core [ipx::current_core]
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 17 14:25:13 2018...

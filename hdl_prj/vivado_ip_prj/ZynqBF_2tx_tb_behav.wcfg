@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ZynqBF_2tx_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ZynqBF_2tx_tb" />
+            <top_module name="glbl" />
+            <top_module name="zynqbf_2t_ip_src_zynqbf_2tx_fpga_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3297346766666fs"></ZoomStartTime>
+      <ZoomEndTime time="3497346766667fs"></ZoomEndTime>
+      <Cursor1Time time="2973196667000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="186"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/dut/u_channel_estimator/u_in_fifo/clk200">
+      <obj_property name="ElementShortName">clk200</obj_property>
+      <obj_property name="ObjectShortName">clk200</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/ch1_i">
+      <obj_property name="ElementShortName">ch1_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch1_i[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">15</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/ch1_q">
+      <obj_property name="ElementShortName">ch1_q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch1_q[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/ch2_i">
+      <obj_property name="ElementShortName">ch2_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch2_i[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">15</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/ch2_q">
+      <obj_property name="ElementShortName">ch2_q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch2_q[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider41" type="divider">
+      <obj_property name="label">peak tracking</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FFFFFF</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/dut/u_channel_estimator/u_correlators/corr_dout[0]">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+      <obj_property name="label">corr_dout0</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">60</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="AnalogYRangeMin">-41291.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">-40572.000000</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/dut/u_channel_estimator/u_correlators/corr_dout[1]">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+      <obj_property name="label">corr_dout1</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">60</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">-41291.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">-40572.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/dut/u_channel_estimator/u_sync_csi/ch_i_in">
+      <obj_property name="ElementShortName">ch_i_in[0:4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_i_in[0:4][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/dut/u_channel_estimator/u_sync_csi/ch_q_in">
+      <obj_property name="ElementShortName">ch_q_in[0:4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_q_in[0:4][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/dut/u_channel_estimator/u_sync_csi/ch_i_out">
+      <obj_property name="ElementShortName">ch_i_out[0:4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_i_out[0:4][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/dut/u_channel_estimator/u_sync_csi/ch_q_out">
+      <obj_property name="ElementShortName">ch_q_out[0:4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_q_out[0:4][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

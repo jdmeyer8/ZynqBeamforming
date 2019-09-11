@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../prj_ip.srcs/sources_1/ip/gsram5_1/sim/gsram5.v" \
+"../../../../prj_ip.srcs/sources_1/ip/gsram4_1/sim/gsram4.v" \
+"../../../../prj_ip.srcs/sources_1/ip/gsram3_1/sim/gsram3.v" \
+"../../../../prj_ip.srcs/sources_1/ip/gsram2_1/sim/gsram2.v" \
+"../../../../prj_ip.srcs/sources_1/ip/gsram1_1/sim/gsram1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

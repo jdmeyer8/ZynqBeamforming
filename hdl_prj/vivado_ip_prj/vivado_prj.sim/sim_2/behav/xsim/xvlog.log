@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.ip_user_files/ip/gsram5/sim/gsram5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gsram5
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.ip_user_files/ip/gsram4/sim/gsram4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gsram4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.ip_user_files/ip/gsram3/sim/gsram3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gsram3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.ip_user_files/ip/gsram2/sim/gsram2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gsram2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.ip_user_files/ip/gsram1/sim/gsram1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gsram1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/vivado_ip_prj/vivado_prj.ip_user_files/ip/rx_ram_core/sim/rx_ram_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rx_ram_core

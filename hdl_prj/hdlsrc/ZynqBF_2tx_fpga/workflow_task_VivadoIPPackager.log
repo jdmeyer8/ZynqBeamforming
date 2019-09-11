@@ -1,0 +1,498 @@
+Task "Vivado IP Packager" successful.
+Generated logfile: 
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source vivado_ip_package.tcl
+# create_project prj_ip {} -part xc7z045ffg900-2 -force
+# set_property ip_repo_paths {../../} [current_fileset]
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_dut.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd}
+CRITICAL WARNING: [Vivado 12-3645] Please note that adding or importing multiple files, one at a time, can be performance intensive.  Both add_files and import_files commands accept multiple files as input, and passing a collection of multiple files to a single add_files or import_files commands can offer significant performance improvement.
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip_axi_lite.vhd}
+# add_files -norecurse {../hdl/vhdl/ZynqBF_2t_ip.vhd}
+# set_property top ZynqBF_2t_ip [get_filesets sources_1]
+# set_property top ZynqBF_2t_ip [get_filesets sim_1]
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# ipx::package_project -root_dir {../} -force
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/prj_ip'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'AXI4_Lite' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'AXI4_Lite_ARESETN' as interface 'AXI4_Lite_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'AXI4_Lite_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'IPCORE_RESETN' as interface 'IPCORE_RESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'IPCORE_RESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'AXI4_Lite_ACLK' as interface 'AXI4_Lite_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'AXI4_Lite_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'AXI4_Lite'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'IPCORE_CLK' as interface 'IPCORE_CLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'AXI4_Lite_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'AXI4_Lite_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'IPCORE_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'IPCORE_RESETN'.
+ipx::package_project: Time (s): cpu = 00:00:00.90 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.867 ; gain = 20.047 ; free physical = 164 ; free virtual = 9377
+# set_property name ZynqBF_2t_ip [ipx::current_core]
+# set_property display_name ZynqBF_2t_ip [ipx::current_core]
+# set_property version {1.0} [ipx::current_core]
+# set_property library {ip} [ipx::current_core]
+# set Families [split [lsort -uniq [get_property C_FAMILY [get_parts]]]]
+# set IPSupportedFamily {}
+# foreach family $Families {append IPSupportedFamily "{$family} {Production} "}
+# set_property supported_families $IPSupportedFamily [ipx::current_core]
+# set_property taxonomy {{/HDL Coder Generated IP}} [ipx::current_core]
+# set_property description {HDL Coder generated IP} [ipx::current_core]
+# set_property core_revision 1902111011 [ipx::current_core]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_pkg.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_goldSequences.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_gs_selector.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlation_config.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator_en.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_data_in.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_get_bit.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_SimpleDualPortRAM_generic.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_rx_ram_i.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_all_u.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_shift_rx.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator_i.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_sum_elements_i.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator1.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_running_max.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_store_index.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch1.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_select_inputs.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ram_rd_counter.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ram_counter.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlation_config_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator_en_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_data_in_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_gold_sequences_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_correlator2.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_peak_fsm_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_running_max_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_store_index_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_peakdetect_ch2.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_state_machine.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_rx_i_fifo.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_rx_q_fifo.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_in_fifo.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_rx_bram.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_Detect_Change.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal_core.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_HDL_Reciprocal.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_calc_inverse.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_local_fsm.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_update_csi.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_select_inputs_block.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ch_est.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga_tc.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_dut.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_dut.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_dut.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_dut.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_dut.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_dut.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_axi_lite_module.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd" already exists in file group "xilinx_anylanguagesynthesis", cannot add it again.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-1971] File named "hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd" already exists in file group "xilinx_anylanguagebehavioralsimulation", cannot add it again.
+INFO: [Common 17-14] Message 'IP_Flow 19-1971' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_addr_decoder.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_axi_lite.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_axi_lite.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip_axi_lite.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip_axi_lite.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip.vhd} [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+# ipx::add_file {hdl/vhdl/ZynqBF_2t_ip.vhd} [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+# set_property type {{vhdlSource}} [ipx::get_files {hdl/vhdl/ZynqBF_2t_ip.vhd} -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+# ipx::remove_all_bus_interface [ipx::current_core]
+# ipx::remove_all_memory_map [ipx::current_core]
+# ipx::remove_all_address_space [ipx::current_core]
+# ipx::add_bus_interface {AXI4_Lite} [ipx::current_core]
+# set_property abstraction_type_vlnv {xilinx.com:interface:aximm_rtl:1.0} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property bus_type_vlnv {xilinx.com:interface:aximm:1.0} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# ipx::add_port_map {AWADDR} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_AWADDR} [ipx::get_port_maps AWADDR -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {AWVALID} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_AWVALID} [ipx::get_port_maps AWVALID -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {WDATA} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_WDATA} [ipx::get_port_maps WDATA -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {WSTRB} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_WSTRB} [ipx::get_port_maps WSTRB -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {WVALID} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_WVALID} [ipx::get_port_maps WVALID -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {BREADY} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_BREADY} [ipx::get_port_maps BREADY -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {ARADDR} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_ARADDR} [ipx::get_port_maps ARADDR -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {ARVALID} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_ARVALID} [ipx::get_port_maps ARVALID -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {RREADY} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_RREADY} [ipx::get_port_maps RREADY -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {AWREADY} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_AWREADY} [ipx::get_port_maps AWREADY -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {WREADY} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_WREADY} [ipx::get_port_maps WREADY -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {BRESP} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_BRESP} [ipx::get_port_maps BRESP -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {BVALID} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_BVALID} [ipx::get_port_maps BVALID -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {ARREADY} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_ARREADY} [ipx::get_port_maps ARREADY -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {RDATA} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_RDATA} [ipx::get_port_maps RDATA -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {RRESP} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_RRESP} [ipx::get_port_maps RRESP -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_port_map {RVALID} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_RVALID} [ipx::get_port_maps RVALID -of_objects [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_bus_interface {AXI4_Lite_signal_clock} [ipx::current_core]
+# set_property abstraction_type_vlnv {xilinx.com:signal:clock_rtl:1.0} [ipx::get_bus_interfaces AXI4_Lite_signal_clock -of_objects [ipx::current_core]]
+# set_property bus_type_vlnv {xilinx.com:signal:clock:1.0} [ipx::get_bus_interfaces AXI4_Lite_signal_clock -of_objects [ipx::current_core]]
+# ipx::add_port_map {CLK} [ipx::get_bus_interfaces AXI4_Lite_signal_clock -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_ACLK} [ipx::get_port_maps CLK -of_objects [ipx::get_bus_interfaces AXI4_Lite_signal_clock -of_objects [ipx::current_core]]]
+# ipx::add_bus_interface {AXI4_Lite_signal_reset} [ipx::current_core]
+# set_property abstraction_type_vlnv {xilinx.com:signal:reset_rtl:1.0} [ipx::get_bus_interfaces AXI4_Lite_signal_reset -of_objects [ipx::current_core]]
+# set_property bus_type_vlnv {xilinx.com:signal:reset:1.0} [ipx::get_bus_interfaces AXI4_Lite_signal_reset -of_objects [ipx::current_core]]
+# ipx::add_port_map {RST} [ipx::get_bus_interfaces AXI4_Lite_signal_reset -of_objects [ipx::current_core]]
+# set_property physical_name {AXI4_Lite_ARESETN} [ipx::get_port_maps RST -of_objects [ipx::get_bus_interfaces AXI4_Lite_signal_reset -of_objects [ipx::current_core]]]
+# ipx::add_bus_parameter {ASSOCIATED_BUSIF} [ipx::get_bus_interfaces AXI4_Lite_signal_clock -of_objects [ipx::current_core]]
+# set_property value {AXI4_Lite} [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces AXI4_Lite_signal_clock -of_objects [ipx::current_core]]]
+# ipx::add_bus_parameter {ASSOCIATED_RESET} [ipx::get_bus_interfaces AXI4_Lite_signal_clock -of_objects [ipx::current_core]]
+# set_property value {AXI4_Lite_ARESETN} [ipx::get_bus_parameters ASSOCIATED_RESET -of_objects [ipx::get_bus_interfaces AXI4_Lite_signal_clock -of_objects [ipx::current_core]]]
+# ipx::add_bus_parameter {POLARITY} [ipx::get_bus_interfaces AXI4_Lite_signal_reset -of_objects [ipx::current_core]]
+# set_property value {ACTIVE_LOW} [ipx::get_bus_parameters POLARITY -of_objects [ipx::get_bus_interfaces AXI4_Lite_signal_reset -of_objects [ipx::current_core]]]
+# ipx::add_memory_map {AXI4_Lite} [ipx::current_core]
+# set_property slave_memory_map_ref {AXI4_Lite} [ipx::get_bus_interfaces AXI4_Lite -of_objects [ipx::current_core]]
+# ipx::add_address_block {reg0} [ipx::get_memory_maps AXI4_Lite -of_objects [ipx::current_core]]
+# set_property range {65536} [ipx::get_address_blocks reg0 -of_objects [ipx::get_memory_maps AXI4_Lite -of_objects [ipx::current_core]]]
+# ipx::add_bus_interface {IPCORE_CLK} [ipx::current_core]
+# set_property abstraction_type_vlnv {xilinx.com:signal:clock_rtl:1.0} [ipx::get_bus_interfaces IPCORE_CLK -of_objects [ipx::current_core]]
+# set_property bus_type_vlnv {xilinx.com:signal:clock:1.0} [ipx::get_bus_interfaces IPCORE_CLK -of_objects [ipx::current_core]]
+# ipx::add_port_map {CLK} [ipx::get_bus_interfaces IPCORE_CLK -of_objects [ipx::current_core]]
+# set_property physical_name {IPCORE_CLK} [ipx::get_port_maps CLK -of_objects [ipx::get_bus_interfaces IPCORE_CLK -of_objects [ipx::current_core]]]
+# ipx::add_bus_interface {IPCORE_RESETN} [ipx::current_core]
+# set_property abstraction_type_vlnv {xilinx.com:signal:reset_rtl:1.0} [ipx::get_bus_interfaces IPCORE_RESETN -of_objects [ipx::current_core]]
+# set_property bus_type_vlnv {xilinx.com:signal:reset:1.0} [ipx::get_bus_interfaces IPCORE_RESETN -of_objects [ipx::current_core]]
+# ipx::add_port_map {RST} [ipx::get_bus_interfaces IPCORE_RESETN -of_objects [ipx::current_core]]
+# set_property physical_name {IPCORE_RESETN} [ipx::get_port_maps RST -of_objects [ipx::get_bus_interfaces IPCORE_RESETN -of_objects [ipx::current_core]]]
+# ipx::add_bus_parameter {ASSOCIATED_RESET} [ipx::get_bus_interfaces IPCORE_CLK -of_objects [ipx::current_core]]
+# set_property value {IPCORE_RESETN} [ipx::get_bus_parameters ASSOCIATED_RESET -of_objects [ipx::get_bus_interfaces IPCORE_CLK -of_objects [ipx::current_core]]]
+# ipx::add_bus_parameter {POLARITY} [ipx::get_bus_interfaces IPCORE_RESETN -of_objects [ipx::current_core]]
+# set_property value {ACTIVE_LOW} [ipx::get_bus_parameters POLARITY -of_objects [ipx::get_bus_interfaces IPCORE_RESETN -of_objects [ipx::current_core]]]
+# ipx::add_file_group -type {product_guide} {} [ipx::current_core]
+# ipx::add_file {doc/doc_arch_axi4_lite.jpg} [ipx::get_file_groups xilinx_productguide -of_objects [ipx::current_core]]
+# set_property type {{image}} [ipx::get_files {doc/doc_arch_axi4_lite.jpg} -of_objects [ipx::get_file_groups xilinx_productguide -of_objects [ipx::current_core]]]
+# ipx::add_file {doc/free_running.jpg} [ipx::get_file_groups xilinx_productguide -of_objects [ipx::current_core]]
+# set_property type {{image}} [ipx::get_files {doc/free_running.jpg} -of_objects [ipx::get_file_groups xilinx_productguide -of_objects [ipx::current_core]]]
+# ipx::add_file {doc/ZynqBF_2tx_fpga_ip_core_report.html} [ipx::get_file_groups xilinx_productguide -of_objects [ipx::current_core]]
+# set_property type {{html}} [ipx::get_files {doc/ZynqBF_2tx_fpga_ip_core_report.html} -of_objects [ipx::get_file_groups xilinx_productguide -of_objects [ipx::current_core]]]
+# ipx::add_file_group -type {misc} {} [ipx::current_core]
+# ipx::add_file {include/ZynqBF_2t_ip_addr.h} [ipx::get_file_groups xilinx_miscfiles -of_objects [ipx::current_core]]
+# set_property type {{cSource}} [ipx::get_files {include/ZynqBF_2t_ip_addr.h} -of_objects [ipx::get_file_groups xilinx_miscfiles -of_objects [ipx::current_core]]]
+# ipx::create_xgui_files [ipx::current_core]
+# ipx::check_integrity -quiet [ipx::current_core]
+# ipx::save_core [ipx::current_core]
+# ipx::archive_core {../ZynqBF_2t_ip_v1_0.zip} [ipx::current_core]
+# close_project
+# exit
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 11 10:12:49 2019...
+
+Elapsed time is 53.2139 seconds.

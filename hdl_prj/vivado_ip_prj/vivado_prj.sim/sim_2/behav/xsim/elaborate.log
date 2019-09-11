@@ -1,0 +1,82 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 74cb1648533d463b96a46517a6f0543c --incr --debug typical --relax --mt 8 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ZynqBF_2tx_tb_behav xil_defaultlib.ZynqBF_2tx_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.zynqbf_2t_ip_src_zynqbf_2tx_fpga...
+Compiling package ieee.math_real
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package unisim.vcomponents
+Compiling package unimacro.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_running_max [zynqbf_2t_ip_src_running_max_def...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ch_est_mac [zynqbf_2t_ip_src_ch_est_mac_defa...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ch_est2 [zynqbf_2t_ip_src_ch_est2_default]
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="zyn...
+Compiling module xil_defaultlib.rx_ram_core
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_bram [zynqbf_2t_ip_src_rx_bram_default]
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="zyn...
+Compiling module xil_defaultlib.gsram1
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSeq_ram [zynqbf_2t_ip_src_goldseq_ram_def...]
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="zyn...
+Compiling module xil_defaultlib.gsram2
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSeq_ram [\ZynqBF_2t_ip_src_goldSeq_ram(ch...]
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="zyn...
+Compiling module xil_defaultlib.gsram3
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSeq_ram [\ZynqBF_2t_ip_src_goldSeq_ram(ch...]
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="zyn...
+Compiling module xil_defaultlib.gsram4
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSeq_ram [\ZynqBF_2t_ip_src_goldSeq_ram(ch...]
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="zyn...
+Compiling module xil_defaultlib.gsram5
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSeq_ram [\ZynqBF_2t_ip_src_goldSeq_ram(ch...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_goldSeq [\ZynqBF_2t_ip_src_goldSeq(n=5)\]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_shift_rx [zynqbf_2t_ip_src_shift_rx_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_gs_mult_core [\ZynqBF_2t_ip_src_rx_gs_mult_cor...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_rx_gs_mult [\ZynqBF_2t_ip_src_rx_gs_mult(n=5...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_correlators [\ZynqBF_2t_ip_src_correlators(nc...]
+Compiling architecture ff18_internal_vhdl_v of entity unisim.FF18_INTERNAL_VHDL [\FF18_INTERNAL_VHDL(data_width=3...]
+Compiling architecture fifo18e1_v of entity unisim.FIFO18E1 [\FIFO18E1(data_width=36,fifo_mod...]
+Compiling architecture fifo18_36_v of entity unisim.FIFO18_36 [\FIFO18_36(almost_full_offset="0...]
+Compiling architecture fifo_v of entity unimacro.FIFO_DUALCLOCK_MACRO [\FIFO_DUALCLOCK_MACRO(data_width...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_in_fifo [zynqbf_2t_ip_src_in_fifo_default]
+Compiling architecture ff36_internal_vhdl_v of entity unisim.FF36_INTERNAL_VHDL [\FF36_INTERNAL_VHDL(almost_full_...]
+Compiling architecture fifo36e1_v of entity unisim.FIFO36E1 [\FIFO36E1(almost_full_offset="00...]
+Compiling architecture fifo36_v of entity unisim.FIFO36 [\FIFO36(almost_full_offset="0000...]
+Compiling architecture fifo_v of entity unimacro.FIFO_DUALCLOCK_MACRO [\FIFO_DUALCLOCK_MACRO(almost_ful...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_sync_csi [zynqbf_2t_ip_src_sync_csi_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_channel_estimator [zynqbf_2t_ip_src_channel_estimat...]
+Compiling architecture rtl of entity xil_defaultlib.ZynqBF_2t_ip_src_ZynqBF_2tx_fpga [zynqbf_2t_ip_src_zynqbf_2tx_fpga...]
+Compiling architecture behavioral of entity xil_defaultlib.zynqbf_2tx_tb
+Built simulation snapshot ZynqBF_2tx_tb_behav

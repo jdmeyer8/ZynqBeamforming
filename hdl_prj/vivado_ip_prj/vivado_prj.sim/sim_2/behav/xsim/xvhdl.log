@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_correlators.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_correlators
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_channel_estimator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_channel_estimator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jason/matlab/Projects/ZynqBF_2tx/hdl_prj/ipcore/ZynqBF_2t_ip_v1_0/hdl/vhdl/ZynqBF_2t_ip_src_ZynqBF_2tx_fpga.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ZynqBF_2t_ip_src_ZynqBF_2tx_fpga

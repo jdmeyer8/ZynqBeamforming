@@ -1,0 +1,22 @@
+##################################################
+#
+# For info on creating trigger state machines:
+#   1) In the main Vivado menu bar, select
+#      Window > Language Templates
+#   2) In the Templates window, select
+#      Debug > Trigger State Machine
+#   3) Refer to the entry 'Info' for an overview
+#      of the trigger state machine language.
+#
+# More information can be found in this document:
+#
+#   Vivado Design Suite User Guide: Programming
+#   and Debugging (UG908)
+#
+##################################################
+state my_state0:
+    if (i_system_wrapper/system_i/ZynqBF_2t_ip_0/inst/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/u_correlators/ch2_corr_probe >= 32'h00150000) then
+        trigger;
+    else
+        goto my_state0;
+    endif

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Oct 17 14:24:27 2018
+# Process ID: 10812
+# Current directory: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/xilinx/axi_adxcvr
+# Command line: vivado -mode batch -source axi_adxcvr_ip.tcl
+# Log file: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/xilinx/axi_adxcvr/vivado.log
+# Journal file: /home/jason/Documents/MATLAB/SupportPackages/R2018b/3P.instrset/analogdevices-hdl.instrset/library/xilinx/axi_adxcvr/vivado.jou
+#-----------------------------------------------------------
+source axi_adxcvr_ip.tcl

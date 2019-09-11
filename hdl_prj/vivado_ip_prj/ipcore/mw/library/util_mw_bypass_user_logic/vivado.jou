@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Aug 30 15:55:23 2018
+# Process ID: 22312
+# Current directory: /mathworks/devel/bat/Bspkg18b/build/matlab/toolbox/shared/sdr/platform/temp/library/util_mw_bypass_user_logic
+# Command line: vivado -mode batch -source util_mw_bypass_user_logic_ip.tcl
+# Log file: /mathworks/devel/bat/Bspkg18b/build/matlab/toolbox/shared/sdr/platform/temp/library/util_mw_bypass_user_logic/vivado.log
+# Journal file: /mathworks/devel/bat/Bspkg18b/build/matlab/toolbox/shared/sdr/platform/temp/library/util_mw_bypass_user_logic/vivado.jou
+#-----------------------------------------------------------
+source util_mw_bypass_user_logic_ip.tcl

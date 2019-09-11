@@ -1,0 +1,456 @@
+15:06:16 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/adc_core.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+../src/adc_core.c:45:23: fatal error: xil_cache.h: No such file or directory
+ #include <xil_cache.h>
+                       ^
+compilation terminated.
+src/subdir.mk:51: recipe for target 'src/adc_core.o' failed
+make: *** [src/adc_core.o] Error 1
+15:06:25 **** Auto Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/adc_core.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+../src/adc_core.c:45:23: fatal error: xil_cache.h: No such file or directory
+ #include <xil_cache.h>
+                       ^
+compilation terminated.
+src/subdir.mk:51: recipe for target 'src/adc_core.o' failed
+make: *** [src/adc_core.o] Error 1
+15:07:04 **** Build of project sw_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/lwip141_v2_0/src
+make -C ps7_cortexa9_0/libsrc/lwip141_v2_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_3/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/iic_v3_4/src
+make -C ps7_cortexa9_0/libsrc/iic_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/spips_v3_0/src
+make -C ps7_cortexa9_0/libsrc/spips_v3_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_5/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_5/src
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_8/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_5/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling dmaps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling ddrps
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling gpiops
+Running Make libs in ps7_cortexa9_0/libsrc/lwip141_v2_0/src
+make -C ps7_cortexa9_0/libsrc/lwip141_v2_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling lwip src and adapter files
+In file included from ../../../include/lwip/ip.h:39:0,
+                 from lwip-1.4.1/src/core/ipv4/ip.c:42:
+lwip-1.4.1/src/core/ipv4/ip.c: In function 'ip_input':
+../../../include/lwip/ip_addr.h:200:39: warning: the comparison will always evaluate as 'false' for the address of 'current_iphdr_src' will never be NULL [-Waddress]
+ #define ip_addr_isany(addr1) ((addr1) == NULL || (addr1)->addr == IPADDR_ANY)
+                                       ^
+lwip-1.4.1/src/core/ipv4/ip.c:473:24: note: in expansion of macro 'ip_addr_isany'
+   if (check_ip_src && !ip_addr_isany(&current_iphdr_src))
+                        ^~~~~~~~~~~~~
+In file included from ../../../include/lwip/netif.h:41:0,
+                 from ../../../include/lwip/udp.h:40,
+                 from lwip-1.4.1/src/core/dhcp.c:75:
+lwip-1.4.1/src/core/dhcp.c: In function 'dhcp_bind':
+../../../include/lwip/ip_addr.h:200:39: warning: the comparison will always evaluate as 'false' for the address of 'gw_addr' will never be NULL [-Waddress]
+ #define ip_addr_isany(addr1) ((addr1) == NULL || (addr1)->addr == IPADDR_ANY)
+                                       ^
+lwip-1.4.1/src/core/dhcp.c:987:7: note: in expansion of macro 'ip_addr_isany'
+   if (ip_addr_isany(&gw_addr)) {
+       ^~~~~~~~~~~~~
+In file included from ../../../include/xemacps.h:348:0,
+                 from ../../../include/netif/xemacpsif.h:59,
+                 from contrib/ports/xilinx/netif/xemacpsif_dma.c:39:
+contrib/ports/xilinx/netif/xemacpsif_dma.c: In function 'init_dma':
+../../../include/xemacps_bd.h:163:62: warning: 'bdrxterminate' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     (*(u32 *)((UINTPTR)(void*)(BaseAddress) + (u32)(Offset)) = (u32)(Data))
+                                                              ^
+contrib/ports/xilinx/netif/xemacpsif_dma.c:558:14: note: 'bdrxterminate' was declared here
+  XEmacPs_Bd *bdrxterminate;
+              ^~~~~~~~~~~~~
+In file included from ../../../include/xemacps.h:348:0,
+                 from ../../../include/netif/xemacpsif.h:59,
+                 from contrib/ports/xilinx/netif/xemacpsif_dma.c:39:
+../../../include/xemacps_bd.h:163:15: warning: 'bdtxterminate' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     (*(u32 *)((UINTPTR)(void*)(BaseAddress) + (u32)(Offset)) = (u32)(Data))
+               ^
+contrib/ports/xilinx/netif/xemacpsif_dma.c:557:14: note: 'bdtxterminate' was declared here
+  XEmacPs_Bd *bdtxterminate;
+              ^~~~~~~~~~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_3/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/iic_v3_4/src
+make -C ps7_cortexa9_0/libsrc/iic_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling iic
+Running Make libs in ps7_cortexa9_0/libsrc/spips_v3_0/src
+make -C ps7_cortexa9_0/libsrc/spips_v3_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling spips
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_5/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling standalone
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_5/src
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling iicps
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_8/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_5/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+15:07:16 **** Clean-only build of configuration Debug for project sw ****
+make clean 
+rm -rf  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/main.o ./src/platform.o ./src/udp.o ./src/util.o  ./src/ad9361.d ./src/ad9361_api.d ./src/ad9361_conv.d ./src/adc_core.d ./src/command.d ./src/console.d ./src/dac_core.d ./src/main.d ./src/platform.d ./src/udp.d ./src/util.d  sw.elf.size  sw.elf
+ 
+15:07:16 **** Auto Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/ad9361.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ad9361.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ad9361.d" -MT"src/ad9361.o" -o "src/ad9361.o" "../src/ad9361.c"
+In file included from ../src/platform.h:46:0,
+                 from ../src/ad9361.c:49:
+../src/ad9361.c: In function 'ad9361_load_gt':
+../src/ad9361.c:1413:26: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+  dev_dbg(&phy->spi->dev, "%s: frequency %"PRIu64" (band %d)",
+                          ^
+../src/util.h:77:52: note: in definition of macro 'dev_dbg'
+ #define dev_dbg(dev, format, ...) ({ if (0) printf(format, ## __VA_ARGS__); })
+                                                    ^~~~~~
+../src/ad9361.c: In function 'set_split_table_gain':
+../src/ad9361.c:2115:16: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int32_t {aka long int}' [-Wformat=]
+   dev_err(dev, "Invalid gain %d, supported range [%d - %d]\n",
+                ^
+../src/util.h:72:45: note: in definition of macro 'dev_err'
+ #define dev_err(dev, format, ...)  ({printf(format, ## __VA_ARGS__);printf("\n"); })
+                                             ^~~~~~
+../src/ad9361.c: In function 'set_full_table_gain':
+../src/ad9361.c:2159:16: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int32_t {aka long int}' [-Wformat=]
+   dev_err(dev, "Invalid gain %d, supported range [%d - %d]\n",
+                ^
+../src/util.h:72:45: note: in definition of macro 'dev_err'
+ #define dev_err(dev, format, ...)  ({printf(format, ## __VA_ARGS__);printf("\n"); })
+                                             ^~~~~~
+Finished building: ../src/ad9361.c
+ 
+Building file: ../src/ad9361_api.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ad9361_api.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ad9361_api.d" -MT"src/ad9361_api.o" -o "src/ad9361_api.o" "../src/ad9361_api.c"
+Finished building: ../src/ad9361_api.c
+ 
+Building file: ../src/ad9361_conv.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ad9361_conv.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ad9361_conv.d" -MT"src/ad9361_conv.o" -o "src/ad9361_conv.o" "../src/ad9361_conv.c"
+In file included from ../src/platform.h:46:0,
+                 from ../src/ad9361_conv.c:46:
+../src/ad9361_conv.c: In function 'ad9361_dig_tune':
+../src/ad9361_conv.c:514:26: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+  dev_dbg(&phy->spi->dev, "%s: freq %u flags 0x%X\n", __func__,
+                          ^
+../src/util.h:77:52: note: in definition of macro 'dev_dbg'
+ #define dev_dbg(dev, format, ...) ({ if (0) printf(format, ## __VA_ARGS__); })
+                                                    ^~~~~~
+Finished building: ../src/ad9361_conv.c
+ 
+Building file: ../src/adc_core.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+Finished building: ../src/adc_core.c
+ 
+Building file: ../src/command.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/command.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/command.d" -MT"src/command.o" -o "src/command.o" "../src/command.c"
+Finished building: ../src/command.c
+ 
+Building file: ../src/console.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/console.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/console.d" -MT"src/console.o" -o "src/console.o" "../src/console.c"
+../src/console.c: In function 'int_to_str':
+../src/console.c:141:2: warning: value computed is not used [-Wunused-value]
+  *buffer_ptr++;
+  ^~~~~~~~~~~~~
+Finished building: ../src/console.c
+ 
+Building file: ../src/dac_core.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
+Finished building: ../src/dac_core.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:503:2: warning: implicit declaration of function 'start_udp' [-Wimplicit-function-declaration]
+  start_udp();
+  ^~~~~~~~~
+../src/main.c:671:3: warning: implicit declaration of function 'Xil_DCacheFlushRange' [-Wimplicit-function-declaration]
+   Xil_DCacheFlushRange(ADC_DDR_BASEADDR, ADC_DMA_TRANSFER_SIZE*4);
+   ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:673:3: warning: implicit declaration of function 'udp_sample' [-Wimplicit-function-declaration]
+   udp_sample(ADC_DDR_BASEADDR);
+   ^~~~~~~~~~
+../src/main.c:660:11: warning: unused variable 'reg_val' [-Wunused-variable]
+  uint32_t reg_val;
+           ^~~~~~~
+../src/main.c:475:6: warning: unused variable 'udp_count' [-Wunused-variable]
+  int udp_count = 0;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/udp.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/udp.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/udp.d" -MT"src/udp.o" -o "src/udp.o" "../src/udp.c"
+../src/udp.c: In function 'udp_echo_recv':
+../src/udp.c:17:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/udp.c: In function 'start_udp':
+../src/udp.c:84:6: warning: type of 'vBasicTFTPServer' defaults to 'int' [-Wimplicit-int]
+ void start_udp( vBasicTFTPServer, pvParameters ){
+      ^~~~~~~~~
+../src/udp.c:84:6: warning: type of 'pvParameters' defaults to 'int' [-Wimplicit-int]
+Finished building: ../src/udp.c
+ 
+Building file: ../src/util.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/util.d" -MT"src/util.o" -o "src/util.o" "../src/util.c"
+Finished building: ../src/util.c
+ 
+Building target: sw.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sw_bsp/ps7_cortexa9_0/lib -o "sw.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/main.o ./src/platform.o ./src/udp.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: sw.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw.elf  |tee "sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 342244	   6580	2119936	2468760	 25ab98	sw.elf
+Finished building: sw.elf.size
+ 
+15:16:54 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:19:11 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:22:02 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:42:35 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:58:56 **** Auto Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:503:2: warning: implicit declaration of function 'start_udp' [-Wimplicit-function-declaration]
+  start_udp();
+  ^~~~~~~~~
+../src/main.c:671:3: warning: implicit declaration of function 'Xil_DCacheFlushRange' [-Wimplicit-function-declaration]
+   Xil_DCacheFlushRange(ADC_DDR_BASEADDR, ADC_DMA_TRANSFER_SIZE*4);
+   ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:673:3: warning: implicit declaration of function 'udp_sample' [-Wimplicit-function-declaration]
+   udp_sample(ADC_DDR_BASEADDR);
+   ^~~~~~~~~~
+../src/main.c:660:11: warning: unused variable 'reg_val' [-Wunused-variable]
+  uint32_t reg_val;
+           ^~~~~~~
+../src/main.c:475:6: warning: unused variable 'udp_count' [-Wunused-variable]
+  int udp_count = 0;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: sw.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sw_bsp/ps7_cortexa9_0/lib -o "sw.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/main.o ./src/platform.o ./src/udp.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: sw.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw.elf  |tee "sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 342180	   6580	2119936	2468696	 25ab58	sw.elf
+Finished building: sw.elf.size
+ 
+16:59:02 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+09:43:08 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+08:45:42 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:08:36 **** Auto Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:503:2: warning: implicit declaration of function 'start_udp' [-Wimplicit-function-declaration]
+  start_udp();
+  ^~~~~~~~~
+../src/main.c:673:3: warning: implicit declaration of function 'Xil_DCacheFlushRange' [-Wimplicit-function-declaration]
+   Xil_DCacheFlushRange(ADC_DDR_BASEADDR, ADC_DMA_TRANSFER_SIZE*4);
+   ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:675:3: warning: implicit declaration of function 'udp_sample' [-Wimplicit-function-declaration]
+   udp_sample(ADC_DDR_BASEADDR);
+   ^~~~~~~~~~
+../src/main.c:662:11: warning: unused variable 'reg_val' [-Wunused-variable]
+  uint32_t reg_val;
+           ^~~~~~~
+../src/main.c:475:6: warning: unused variable 'udp_count' [-Wunused-variable]
+  int udp_count = 0;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: sw.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sw_bsp/ps7_cortexa9_0/lib -o "sw.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/main.o ./src/platform.o ./src/udp.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: sw.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw.elf  |tee "sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 342180	   6580	2119936	2468696	 25ab58	sw.elf
+Finished building: sw.elf.size
+ 
+12:09:33 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:05:10 **** Auto Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:503:2: warning: implicit declaration of function 'start_udp' [-Wimplicit-function-declaration]
+  start_udp();
+  ^~~~~~~~~
+../src/main.c:673:3: warning: implicit declaration of function 'Xil_DCacheFlushRange' [-Wimplicit-function-declaration]
+   Xil_DCacheFlushRange(ADC_DDR_BASEADDR, ADC_DMA_TRANSFER_SIZE*4);
+Finished building: ../src/main.c
+   ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:675:3: warning: implicit declaration of function 'udp_sample' [-Wimplicit-function-declaration]
+   udp_sample(ADC_DDR_BASEADDR);
+ 
+   ^~~~~~~~~~
+Building target: sw.elf
+../src/main.c:662:11: warning: unused variable 'reg_val' [-Wunused-variable]
+  uint32_t reg_val;
+Invoking: ARM v7 gcc linker
+           ^~~~~~~
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sw_bsp/ps7_cortexa9_0/lib -o "sw.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/main.o ./src/platform.o ./src/udp.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+../src/main.c:475:6: warning: unused variable 'udp_count' [-Wunused-variable]
+  int udp_count = 0;
+      ^~~~~~~~~
+Finished building target: sw.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw.elf  |tee "sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 342180	   6580	2119936	2468696	 25ab58	sw.elf
+Finished building: sw.elf.size
+ 
+13:05:17 **** Incremental Build of configuration Debug for project sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

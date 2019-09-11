@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ZynqBF_2tx_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ZynqBF_2tx_tb" />
+            <top_module name="zynqbf_2t_ip_src_zynqbf_2tx_fpga_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="15000000000001fs"></ZoomEndTime>
+      <Cursor1Time time="2895982800000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/rx_i_in">
+      <obj_property name="ElementShortName">rx_i_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_i_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/rx_q_in">
+      <obj_property name="ElementShortName">rx_q_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_q_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/rx_v_in">
+      <obj_property name="ElementShortName">rx_v_in</obj_property>
+      <obj_property name="ObjectShortName">rx_v_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/ce_out_0">
+      <obj_property name="ElementShortName">ce_out_0</obj_property>
+      <obj_property name="ObjectShortName">ce_out_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/ce_out_1">
+      <obj_property name="ElementShortName">ce_out_1</obj_property>
+      <obj_property name="ObjectShortName">ce_out_1</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/rx_i_out">
+      <obj_property name="ElementShortName">rx_i_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_i_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/rx_q_out">
+      <obj_property name="ElementShortName">rx_q_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_q_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ZynqBF_2tx_tb/rx_v_out">
+      <obj_property name="ElementShortName">rx_v_out</obj_property>
+      <obj_property name="ObjectShortName">rx_v_out</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/ch1_i">
+      <obj_property name="ElementShortName">ch1_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ch1_i[15:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">15</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/ch1_q">
+      <obj_property name="ElementShortName">ch1_q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ch1_q[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/ch2_i">
+      <obj_property name="ElementShortName">ch2_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ch2_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/ch2_q">
+      <obj_property name="ElementShortName">ch2_q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ch2_q[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/probe">
+      <obj_property name="ElementShortName">probe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">probe[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/probe_xcorr1">
+      <obj_property name="ElementShortName">probe_xcorr1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_xcorr1[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/probe_xcorr2">
+      <obj_property name="ElementShortName">probe_xcorr2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_xcorr2[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/probe_state">
+      <obj_property name="ElementShortName">probe_state[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_state[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/probe_ch1i">
+      <obj_property name="ElementShortName">probe_ch1i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_ch1i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/probe_ch1q">
+      <obj_property name="ElementShortName">probe_ch1q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_ch1q[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ZynqBF_2tx_tb/probe_ch1r">
+      <obj_property name="ElementShortName">probe_ch1r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_ch1r[31:0]</obj_property>
+   </wvobject>
+</wave_config>

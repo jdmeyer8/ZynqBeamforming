@@ -1,0 +1,25 @@
+$date
+        2019-Mar-20 10:16:13
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 16 " i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/rx_q [15:0] $end
+$var reg 16 2 i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/rx_i [15:0] $end
+$var reg 16 B i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1i_rfclk [15:0] $end
+$var reg 15 R i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2i_rfclk [14:0] $end
+$var reg 1 a u_ila_0_ch2i_rfclk $end
+$var reg 16 b i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch1q_rfclk [15:0] $end
+$var reg 13 r i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2q_rfclk_1 [12:0] $end
+$var reg 1 !" u_ila_0_ch2q_rfclk $end
+$var reg 2 "" i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/ch2q_rfclk [15:14] $end
+$var reg 32 $" i_system_wrapper/system_i/ZynqBF_2t_ip_0/U0/u_ZynqBF_2t_ip_dut_inst/u_ZynqBF_2t_ip_src_ZynqBF_2tx_fpga/u_channel_estimator/probe_xcorr1 [31:0] $end
+$var reg 1 D" _TRIGGER $end
+$var reg 1 E" _WINDOW $end
+$var reg 1 F" _GAP $end
+$upscope $end
+$enddefinitions $end

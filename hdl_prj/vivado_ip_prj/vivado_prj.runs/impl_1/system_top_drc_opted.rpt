@@ -1,0 +1,434 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Tue Apr 16 14:49:01 2019
+| Host         : jason-OptiPlex-9020 running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_drc -file system_top_drc_opted.rpt -pb system_top_drc_opted.pb -rpx system_top_drc_opted.rpx
+| Design       : system_top
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_system_top
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 79
++-----------+----------+-------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                       | Violations |
++-----------+----------+-------------------------------------------------------------------+------------+
+| CHECK-3   | Warning  | Report rule limit reached                                         | 1          |
+| REQP-1839 | Warning  | RAMB36 async control check                                        | 20         |
+| RPBF-3    | Warning  | IO port buffering is incomplete                                   | 2          |
+| AVAL-4    | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 56         |
++-----------+----------+-------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CHECK-3#1 Warning
+Report rule limit reached  
+REQP-1839 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+REQP-1839#1 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#2 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#3 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#4 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#5 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENARDEN (net: i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_request_arb/i_fifo/i_mem/m_mem_read) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#6 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#7 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#8 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#9 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#10 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/ENBWREN (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#11 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#12 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#13 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#14 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#15 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[6] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#16 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/axi_cpu_interconnect/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#17 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#18 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_rx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#19 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#20 Warning
+RAMB36 async control check  
+The RAMB36E1 i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg has an input control pin i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/m_ram_reg/WEBWE[7] (net: i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_request_arb/i_fifo/i_mem/s_mem_write) which is driven by a register (i_system_wrapper/system_i/bypass_tx/inst/u_util_mw_bypass_user_logic_axi_lite_inst/u_util_mw_bypass_user_logic_axi_lite_module_inst/axi_lite_wstate_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port gpio_bd[10] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#2 Warning
+IO port buffering is incomplete  
+Device port gpio_bd[8] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+AVAL-4#1 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_0/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#2 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_0/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#3 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_1/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#4 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_1/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#5 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_2/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#6 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_2/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#7 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_3/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#8 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_3/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#9 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#10 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#11 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#12 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#13 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#14 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#15 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#16 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#17 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#18 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#19 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#20 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#21 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#22 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#23 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#24 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#25 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#26 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#27 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#28 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#29 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#30 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#31 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#32 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#33 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#34 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#35 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#36 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#37 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#38 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#39 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#40 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#41 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#42 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#43 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#44 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#45 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_ad_iqcor/i_mul_i/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#46 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_ad_iqcor/i_mul_q/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#47 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#48 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#49 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#50 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#51 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_0/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#52 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_scale/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#53 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_sine/i_mul_s1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#54 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_sine/i_mul_s2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#55 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_1/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#56 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_dds/i_dds_1_1/i_dds_sine/i_mul_s3_2/i_mult_macro/MULT_MACRO.dsp_v5_1.DSP48_V5_1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+
